@@ -28,7 +28,7 @@
 <meta property="og:description" content="Link:SRM599div1 Medium - FindPolygons">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-02T01:11:45.000Z">
-<meta property="article:modified_time" content="2020-04-02T01:18:57.286Z">
+<meta property="article:modified_time" content="2020-04-02T02:12:43.024Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Topcoder">
 <meta name="twitter:card" content="summary">
@@ -180,7 +180,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-04-02 09:11:45 / Modified: 09:18:57" itemprop="dateCreated datePublished" datetime="2020-04-02T09:11:45+08:00">2020-04-02</time>
+              <time title="Created: 2020-04-02 09:11:45 / Modified: 10:12:43" itemprop="dateCreated datePublished" datetime="2020-04-02T09:11:45+08:00">2020-04-02</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -207,7 +207,7 @@
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>最先开始一直认为边可以是小数或者物理数，数学不好是硬伤。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>最先开始一直认为边可以是小数或者无理数，数学不好是硬伤。</p>
 <p>其实可以得出，边长都是整数，那么继续思考，如果周长是偶数，那么肯定可以做出一个矩形，那么就是说周长是偶数的情况下只需要判断是否可以是三角形即可。</p>
 <p>考虑周长是奇数，其实这样是不合法的。周长是奇数说明有奇数条奇数边，奇数边说明当前顶点的奇偶性发生变化，变化了奇数次，那么最终的顶点和开始的顶点奇偶性不同，不符合条件。</p>
 <p>于是预处理出所有合法的整点，枚举两个点判断即可。</p>
