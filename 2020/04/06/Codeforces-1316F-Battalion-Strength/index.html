@@ -28,7 +28,7 @@
 <meta property="og:description" content="Link:Codeforces 1316F - Battalion Strength">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-06T03:44:48.000Z">
-<meta property="article:modified_time" content="2020-04-06T05:46:50.210Z">
+<meta property="article:modified_time" content="2020-04-07T00:51:14.632Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
@@ -178,10 +178,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-04-06 11:44:48 / Modified: 13:46:50" itemprop="dateCreated datePublished" datetime="2020-04-06T11:44:48+08:00">2020-04-06</time>
+              <time title="Created: 2020-04-06 11:44:48" itemprop="dateCreated datePublished" datetime="2020-04-06T11:44:48+08:00">2020-04-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-07 08:51:14" itemprop="dateModified" datetime="2020-04-07T08:51:14+08:00">2020-04-07</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -207,7 +213,8 @@
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>没仔细思考，主要是数学不好，想简单了。<br>$$\sum_{i=1}^{n}\sum_{j=1}^{n}$$<br>题目说每种序列出现概率相同，意思是每个元素是否被选择的概率是$\frac{1}{2}$，那么转化问题，答案等于<br>$$\sum_{i=1}^{n} \sum_{j=i+1}^{n}{\frac{p_{i}p_{j}}{2^{j-i+1}}}$$<br>这里比较明显，考虑化简式子，比较简单，设<br>$$f[n]=\sum_{i=1}^{n}{p_i*2^{i-1}}$$<br>那么答案等于<br>$$\sum_{i=1}^{n}{\frac{p_i}{2^{i}}f[i-1]}$$</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>没仔细思考，主要是数学不好，想简单了。</p>
+<p>题目说每种序列出现概率相同，意思是每个元素是否被选择的概率是$\frac{1}{2}$，那么转化问题，答案等于<br>$$\sum_{i=1}^{n} \sum_{j=i+1}^{n}{\frac{p_{i}p_{j}}{2^{j-i+1}}}$$<br>这里比较明显，考虑化简式子，比较简单，设<br>$$f[n]=\sum_{i=1}^{n}{p_i*2^{i-1}}$$<br>那么答案等于<br>$$\sum_{i=1}^{n}{\frac{p_i}{2^{i}}f[i-1]}$$</p>
 <p>然后拆一下，线段树维护即可，详见代码。</p>
 <p>概率没学好，没翻译出第一个条件，实属菜鸡。</p>
 <hr>
