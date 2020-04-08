@@ -28,7 +28,7 @@
 <meta property="og:description" content="Link:ABC143F - Distinct Numbers">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-24T02:56:53.000Z">
-<meta property="article:modified_time" content="2020-04-01T13:09:25.781Z">
+<meta property="article:modified_time" content="2020-04-08T08:58:42.764Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Atcoder">
 <meta name="twitter:card" content="summary">
@@ -186,7 +186,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-01 21:09:25" itemprop="dateModified" datetime="2020-04-01T21:09:25+08:00">2020-04-01</time>
+                <time title="Modified: 2020-04-08 16:58:42" itemprop="dateModified" datetime="2020-04-08T16:58:42+08:00">2020-04-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -214,7 +214,7 @@
 
 <hr>
 <h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>先开始发现先削大的肯定最优，但是没办法维护区间减、区间第$k$大。然后又想计算多少个多出来的，发现如果一个堆大于$\frac{n}{k}$会使答案减少，其实这里已经接近答案了，不过这个方法不太对，好像会受到其他格子影响。还想到了二分判定，这也很接近答案了，可惜判定的方法不对，想把数字平均分堆，这是做不到的。</p>
-<p>考虑正接，假设当前为$k$时，答案为$x$是否合法。发现所有数量大于$x$的堆，只能贡献$x$，小于等于$x$的堆，则全部可以贡献，这里是一个类似$Hall$定理的方法，那么由于$k$增大时答案递减，线性维护即可。</p>
+<p>考虑正解，假设当前为$k$时，答案为$x$是否合法。发现所有数量大于$x$的堆，只能贡献$x$，小于等于$x$的堆，则全部可以贡献，这里是一个类似$Hall$定理的方法，那么由于$k$增大时答案递减，线性维护即可。</p>
 <p>时间复杂度$O(n)$,不考虑排序的复杂度。</p>
 <p>这种想法是计算每个堆的贡献，先开始想到的计算每个堆扣多少，只有一步之遥。</p>
 <hr>
@@ -319,7 +319,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
