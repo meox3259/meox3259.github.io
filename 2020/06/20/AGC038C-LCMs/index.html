@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:AGC037C - Numbers on a Circle">
+  <meta name="description" content="Link:AGC038C - LCMs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AGC037C - Numbers on a Circle">
-<meta property="og:url" content="http://yoursite.com/2020/06/15/AGC037C-Numbers-on-a-Circle/index.html">
+<meta property="og:title" content="AGC038C - LCMs">
+<meta property="og:url" content="http://yoursite.com/2020/06/20/AGC038C-LCMs/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:AGC037C - Numbers on a Circle">
+<meta property="og:description" content="Link:AGC038C - LCMs">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-15T13:07:35.000Z">
-<meta property="article:modified_time" content="2020-06-15T13:11:11.088Z">
+<meta property="article:published_time" content="2020-06-20T10:34:48.000Z">
+<meta property="article:modified_time" content="2020-06-20T10:40:44.026Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Atcoder">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/15/AGC037C-Numbers-on-a-Circle/">
+<link rel="canonical" href="http://yoursite.com/2020/06/20/AGC038C-LCMs/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>AGC037C - Numbers on a Circle | meox</title>
+  <title>AGC038C - LCMs | meox</title>
   
 
 
@@ -161,7 +161,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/15/AGC037C-Numbers-on-a-Circle/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/20/AGC038C-LCMs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Shizuka.jpg">
@@ -174,7 +174,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AGC037C - Numbers on a Circle
+          AGC038C - LCMs
         </h1>
 
         <div class="post-meta">
@@ -185,7 +185,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-06-15 21:07:35 / Modified: 21:11:11" itemprop="dateCreated datePublished" datetime="2020-06-15T21:07:35+08:00">2020-06-15</time>
+              <time title="Created: 2020-06-20 18:34:48 / Modified: 18:40:44" itemprop="dateCreated datePublished" datetime="2020-06-20T18:34:48+08:00">2020-06-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -208,15 +208,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/agc037/tasks/agc037_c" target="_blank" rel="noopener">AGC037C - Numbers on a Circle</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/agc038/tasks/agc038_c" target="_blank" rel="noopener">AGC038C - LCMs</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>想了好长时间。</p>
-<p>先开始正着想，想到了一个结论就是单峰可减，但是并没有什么用。然后灵光一现发现可以倒着减，每次减最大值。但是这样模拟会超时，于是批量操作，减到不可以减为止，用一个$set$模拟这个过程。</p>
-<p>时间复杂度$O(nlognlogA)$。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>一个裸的反演，不过我忘了。</p>
+<p>大概是推出来答案等于<br>$$\sum_{d=1}^{m}{\frac{f(d)}{d}}$$<br>$$f(d)=\sum_{d=1}^{m}{a_ia_j[(a_i,a_j) % (Dd) == 0]}$$<br>重点在于求$f(d)$，发现两重循环其实跑不满，因为$Dd \leq m$。<br>于是预处理出一个$s_n$表示<br>$$\sum_{i=1}^{n}\sum_{j=1}^{n}{a_ia_j[(a_i,a_j) % n == 0]}$$<br>然后暴力枚举计算即可。</p>
+<p>时间复杂度$O(nlnn)$。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">b</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; b[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">set</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt; s = &#123; &#123; <span class="number">0</span>, <span class="number">-1</span> &#125; &#125;;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		s.emplace(b[i], i);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(s.size() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">auto</span> o = *s.rbegin();</span><br><span class="line">		s.erase(o);</span><br><span class="line">		<span class="keyword">int</span> p = o.second;</span><br><span class="line">		<span class="keyword">int</span> nxt = s.rbegin() -&gt; first;</span><br><span class="line">		<span class="keyword">int</span> m = b[(p - <span class="number">1</span> + n) % n] + b[(p + <span class="number">1</span>) % n];</span><br><span class="line">		<span class="keyword">int</span> delta = (o.first - a[p]) / m;</span><br><span class="line">		<span class="keyword">if</span>(o.first == a[p]) &#123;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(delta == <span class="number">0</span> || o.first &lt; a[p]) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">			<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		ans += delta;</span><br><span class="line">		o.first -= m * delta;</span><br><span class="line">		b[p] = o.first;</span><br><span class="line">		s.insert(o);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int P &#x3D; 998244353;</span><br><span class="line"></span><br><span class="line">long long power(long long x, long long t) &#123;</span><br><span class="line">	long long ret &#x3D; 1;</span><br><span class="line">	for(; t; t &gt;&gt;&#x3D; 1, x &#x3D; x * x % P) &#123;</span><br><span class="line">		if(t &amp; 1) &#123;</span><br><span class="line">			ret &#x3D; ret * x % P;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	ios::sync_with_stdio(false);</span><br><span class="line">	cin.tie(nullptr);</span><br><span class="line"></span><br><span class="line">	int n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">	int m &#x3D; 1000001;</span><br><span class="line"></span><br><span class="line">	vector&lt;int&gt; mu(m);</span><br><span class="line">	vector&lt;bool&gt; mark(m);</span><br><span class="line">	vector&lt;int&gt; p;</span><br><span class="line">	mu[1] &#x3D; 1;</span><br><span class="line">	for(int i &#x3D; 2; i &lt; m; ++i) &#123;</span><br><span class="line">		if(!mark[i]) &#123;</span><br><span class="line">			p.emplace_back(i);</span><br><span class="line">			mu[i] &#x3D; -1;</span><br><span class="line">		&#125;</span><br><span class="line">		for(int j &#x3D; 0; j &lt; p.size() &amp;&amp; i * p[j] &lt; m; ++j) &#123;</span><br><span class="line">			mark[i * p[j]] &#x3D; true;</span><br><span class="line">			if(i % p[j] &#x3D;&#x3D; 0) &#123;</span><br><span class="line">				mu[i * p[j]] &#x3D; 0;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			mu[i * p[j]] &#x3D; -mu[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	vector&lt;int&gt; cnt(m);</span><br><span class="line">	vector&lt;int&gt; a(n);</span><br><span class="line">	for(int i &#x3D; 0; i &lt; n; ++i) &#123;</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">		cnt[a[i]] +&#x3D; 1;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	vector&lt;int&gt; s(m);</span><br><span class="line">	for(int i &#x3D; 1; i &lt; m; ++i) &#123;</span><br><span class="line">		int pre &#x3D; 0;</span><br><span class="line">		for(int j &#x3D; i; j &lt; m; j +&#x3D; i) &#123;</span><br><span class="line">			s[i] &#x3D; (s[i] + 1LL * pre * cnt[j] % P * j % P) % P;</span><br><span class="line">			s[i] &#x3D; (s[i] + 1LL * cnt[j] * (cnt[j] - 1) &#x2F; 2 % P * j % P * j % P) % P;</span><br><span class="line">			pre &#x3D; (pre + 1LL * cnt[j] * j % P) % P;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	int ans &#x3D; 0;</span><br><span class="line"></span><br><span class="line">	for(int d &#x3D; 1; d &lt; m; ++d) &#123;</span><br><span class="line">		int inv &#x3D; power(d, P - 2);</span><br><span class="line">		for(int i &#x3D; 1; d * i &lt; m; ++i) &#123;</span><br><span class="line">			ans &#x3D; (ans + 1LL * mu[i] * s[d * i] % P * inv % P + P) % P;	</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; ans &lt;&lt; &#39;\n&#39;;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -235,13 +235,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/10/AGC041C-Domino-Quality/" rel="prev" title="AGC041C - Domino Quality">
-      <i class="fa fa-chevron-left"></i> AGC041C - Domino Quality
+    <a href="/2020/06/20/AGC036C-GP-2/" rel="prev" title="AGC036C - GP 2">
+      <i class="fa fa-chevron-left"></i> AGC036C - GP 2
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/16/AGC037B-RGB-Balls/" rel="next" title="AGC037B - RGB Balls">
-      AGC037B - RGB Balls <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
