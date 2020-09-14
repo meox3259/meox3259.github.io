@@ -28,7 +28,7 @@
 <meta property="og:description" content="$meox$被分进了人工智能专业，有一门叫$Python$程序设计的课，那自然是非常好的，于是有了这篇文章。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-14T13:15:46.000Z">
-<meta property="article:modified_time" content="2020-09-14T13:30:10.048Z">
+<meta property="article:modified_time" content="2020-09-14T13:31:02.165Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -185,7 +185,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-14 21:15:46 / Modified: 21:30:10" itemprop="dateCreated datePublished" datetime="2020-09-14T21:15:46+08:00">2020-09-14</time>
+              <time title="Created: 2020-09-14 21:15:46 / Modified: 21:31:02" itemprop="dateCreated datePublished" datetime="2020-09-14T21:15:46+08:00">2020-09-14</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -425,6 +425,61 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
