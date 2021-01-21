@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:Codeforces 1437F - Emotional Fishermen">
+  <meta name="description" content="Link:ARC083E - Bichrome Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces 1437F - Emotional Fishermen">
-<meta property="og:url" content="http://yoursite.com/2020/11/04/Codeforces-1437F-Emotional-Fishermen/index.html">
+<meta property="og:title" content="ARC083E - Bichrome Tree">
+<meta property="og:url" content="http://yoursite.com/2021/01/21/ARC083E-Bichrome-Tree/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:Codeforces 1437F - Emotional Fishermen">
+<meta property="og:description" content="Link:ARC083E - Bichrome Tree">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-04T11:33:57.000Z">
-<meta property="article:modified_time" content="2020-11-04T15:00:53.074Z">
+<meta property="article:published_time" content="2021-01-21T04:48:42.000Z">
+<meta property="article:modified_time" content="2021-01-21T04:54:07.702Z">
 <meta property="article:author" content="meox">
-<meta property="article:tag" content="Codeforces">
+<meta property="article:tag" content="Atcoder">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/11/04/Codeforces-1437F-Emotional-Fishermen/">
+<link rel="canonical" href="http://yoursite.com/2021/01/21/ARC083E-Bichrome-Tree/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>Codeforces 1437F - Emotional Fishermen | meox</title>
+  <title>ARC083E - Bichrome Tree | meox</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/04/Codeforces-1437F-Emotional-Fishermen/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/21/ARC083E-Bichrome-Tree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ada.jpeg">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Codeforces 1437F - Emotional Fishermen
+          ARC083E - Bichrome Tree
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-11-04 19:33:57 / Modified: 23:00:53" itemprop="dateCreated datePublished" datetime="2020-11-04T19:33:57+08:00">2020-11-04</time>
+              <time title="Created: 2021-01-21 12:48:42 / Modified: 12:54:07" itemprop="dateCreated datePublished" datetime="2021-01-21T12:48:42+08:00">2021-01-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,15 +213,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://codeforces.com/problemset/problem/1437/F" target="_blank" rel="noopener">Codeforces 1437F - Emotional Fishermen</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/arc083/tasks/arc083_c" target="_blank" rel="noopener">ARC083E - Bichrome Tree</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>还行。</p>
-<p>发现本质上可以分两种，一种是板子，一种是随从。每个随从跟随一个板子。<br>从大到小考虑每条鱼，如果一条鱼是板子，那么上一个板子必须是这条鱼的两倍，如果是随从，则考虑跟随哪个板子。<br>$dp[i][j]$表示考虑了前$i$条鱼，现在最后的板子是$j$。那么考虑这个鱼放在哪里。<br>一种是作为板子，枚举上一个板子。另一种是跟随，只有当上一个板子比当前鱼的两倍小时，有$i-2$个位置可以插，否则有$i-1$个位置可以插。</p>
-<p>时间复杂度$O(n^2)$。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>树形$dp$。</p>
+<p>首先想一个暴力的$dp$，$dp[i][j][k]$表示$i$的子树中黑点价值和为$j$，白点价值和为$k$，是否可以。<br>这样状态太大，考虑压缩一下，可以变成$dp[i][j]$表示$i$的子树中黑点价值和为$j$，白点价值和最少是多少。<br>这样还是太慢，考虑状态很冗余，因为肯定有一维必须等于$x_{i}$，那么我们可以把一个点的最优状态记为一个二元组$(a, b)$，其中有一个为$x_{i}$。<br>然后对于这个二元组做背包$dp$，判断是否合法即可。</p>
+<p>时间复杂度$O(nx)$。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">5005</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> P = <span class="number">998244353</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">int</span> dp[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	sort(a + <span class="number">1</span>, a + n + <span class="number">1</span>, greater&lt;<span class="keyword">int</span>&gt; ());</span><br><span class="line">	dp[<span class="number">1</span>][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; i; ++j) &#123;</span><br><span class="line">			<span class="keyword">if</span>(a[j] &gt;= a[i] + a[i]) &#123;</span><br><span class="line">				dp[i][i] = (dp[i][i] + dp[i - <span class="number">1</span>][j]) % P;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; i; ++j) &#123;</span><br><span class="line">			<span class="keyword">if</span>(a[j] &gt;= a[i] + a[i]) &#123;</span><br><span class="line">				dp[i][j] = (dp[i][j] + <span class="number">1L</span>L * dp[i - <span class="number">1</span>][j] * (i - <span class="number">1</span>) % P) % P;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				dp[i][j] = (dp[i][j] + <span class="number">1L</span>L * dp[i - <span class="number">1</span>][j] * (i - <span class="number">2</span>) % P) % P;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		ans = (ans + dp[n][i]) % P;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">5000</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = numeric_limits&lt;<span class="keyword">int</span>&gt;::max() / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; <span class="title">G</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> p;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; p;</span><br><span class="line">		p --;</span><br><span class="line">		G[p].emplace_back(i);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">x</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; x[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">bool</span> ok = <span class="literal">true</span>;</span><br><span class="line">	function&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;(<span class="keyword">int</span>)&gt; dfs = [&amp;] (<span class="keyword">int</span> u) &#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt; obj;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> v : G[u]) &#123;</span><br><span class="line">			obj.emplace_back(dfs(v));</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(x[u] + <span class="number">1</span>, inf)</span></span>;</span><br><span class="line">		dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span> [a, b] : obj) &#123;</span><br><span class="line">			<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">tmp</span><span class="params">(x[u] + <span class="number">1</span>, inf)</span></span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = x[u]; i &gt;= a; --i) &#123;</span><br><span class="line">				tmp[i] = min(tmp[i], dp[i - a] + b);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = x[u]; i &gt;= b; --i) &#123;</span><br><span class="line">				tmp[i] = min(tmp[i], dp[i - b] + a);</span><br><span class="line">			&#125;</span><br><span class="line">			swap(dp, tmp);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> Min = *min_element(dp.begin(), dp.end());</span><br><span class="line">		<span class="keyword">if</span> (Min == inf) &#123;</span><br><span class="line">			ok = <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> make_pair(x[u], Min);</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	dfs(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (ok) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"POSSIBLE"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"IMPOSSIBLE"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -231,7 +231,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
+              <a href="/tags/Atcoder/" rel="tag"># Atcoder</a>
           </div>
 
         
@@ -240,13 +240,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/27/ACL-F-Heights-and-Pairs/" rel="prev" title="ACL-F - Heights and Pairs">
-      <i class="fa fa-chevron-left"></i> ACL-F - Heights and Pairs
+    <a href="/2021/01/20/ARC088E-Papple-Sort/" rel="prev" title="ARC088E - Papple Sort">
+      <i class="fa fa-chevron-left"></i> ARC088E - Papple Sort
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/11/24/Codeforces-1438E-Yurii-Can-Do-Everything/" rel="next" title="Codeforces 1438E - Yurii Can Do Everything">
-      Codeforces 1438E - Yurii Can Do Everything <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
