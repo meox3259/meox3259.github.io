@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:Codeforces 1354C2 - Not So Simple Polygon Embedding">
+  <meta name="description" content="Link:Codeforces 1446C - Xor Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces 1354C2 - Not So Simple Polygon Embedding">
-<meta property="og:url" content="http://yoursite.com/2020/05/30/Codeforces-1354C2-Not-So-Simple-Polygon-Embedding/index.html">
+<meta property="og:title" content="Codeforces 1446C - Xor Tree">
+<meta property="og:url" content="http://yoursite.com/2021/02/18/Codeforces-1446C-Xor-Tree/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:Codeforces 1354C2 - Not So Simple Polygon Embedding">
+<meta property="og:description" content="Link:Codeforces 1446C - Xor Tree">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-29T20:44:09.000Z">
-<meta property="article:modified_time" content="2020-05-30T00:23:12.314Z">
+<meta property="article:published_time" content="2021-02-18T13:37:50.000Z">
+<meta property="article:modified_time" content="2021-02-18T13:41:12.779Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/05/30/Codeforces-1354C2-Not-So-Simple-Polygon-Embedding/">
+<link rel="canonical" href="http://yoursite.com/2021/02/18/Codeforces-1446C-Xor-Tree/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>Codeforces 1354C2 - Not So Simple Polygon Embedding | meox</title>
+  <title>Codeforces 1446C - Xor Tree | meox</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/30/Codeforces-1354C2-Not-So-Simple-Polygon-Embedding/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/18/Codeforces-1446C-Xor-Tree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ada.jpeg">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Codeforces 1354C2 - Not So Simple Polygon Embedding
+          Codeforces 1446C - Xor Tree
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-05-30 04:44:09 / Modified: 08:23:12" itemprop="dateCreated datePublished" datetime="2020-05-30T04:44:09+08:00">2020-05-30</time>
+              <time title="Created: 2021-02-18 21:37:50 / Modified: 21:41:12" itemprop="dateCreated datePublished" datetime="2021-02-18T21:37:50+08:00">2021-02-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,14 +213,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://codeforces.com/problemset/problem/1354/C2" target="_blank" rel="noopener">Codeforces 1354C2 - Not So Simple Polygon Embedding</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://codeforces.com/contest/1446/problem/C" target="_blank" rel="noopener">Codeforces 1446C - Xor Tree</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>数学不好。</p>
-<p>首先可以发现需要转一个角度才能正好卡住，但是角度是多少？其实通过对称考虑，角度转过的一定是一半，然后三角函数算一下就完了。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>不太敏锐，需要多做题，熟悉套路。</p>
+<p>认真思考分析题目给的要求，发现可以把最小转化为公共前缀最长。<br>那么也就是说不能存在两对数互相有不同的公共前缀。<br>建一个$trie$树，然后$dfs$计算最多可以选几个即可，每个儿子只能选一个。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> pi = <span class="built_in">acos</span>(<span class="number">-1</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> T;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; T;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(T--) &#123;</span><br><span class="line">		<span class="keyword">int</span> n;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; fixed &lt;&lt; setprecision(<span class="number">10</span>);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">cos</span>(pi / (<span class="number">4.</span> * n)) / <span class="built_in">sin</span>(pi / (<span class="number">2.</span> * n)) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; <span class="title">ch</span><span class="params">(n * <span class="number">30</span> + <span class="number">5</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; (<span class="number">2</span>, <span class="number">-1</span>))</span></span>;</span><br><span class="line">    <span class="keyword">int</span> tot = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="keyword">int</span> cur = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">30</span>; j &gt;= <span class="number">0</span>; --j) &#123;</span><br><span class="line">            <span class="keyword">int</span> w = a[i] &gt;&gt; j &amp; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (ch[cur][w] == <span class="number">-1</span>) &#123;</span><br><span class="line">                ch[cur][w] = tot ++;</span><br><span class="line">            &#125; </span><br><span class="line">            cur = ch[cur][w];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> dfs = [&amp;] (<span class="keyword">auto</span> &amp;&amp;f, <span class="keyword">int</span> x, <span class="keyword">int</span> cur) -&gt; <span class="keyword">void</span> &#123;</span><br><span class="line">        ans = max(ans, cur + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (ch[x][<span class="number">0</span>] != <span class="number">-1</span>) &#123;</span><br><span class="line">            f(f, ch[x][<span class="number">0</span>], cur + (ch[x][<span class="number">1</span>] != <span class="number">-1</span>)); </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (ch[x][<span class="number">1</span>] != <span class="number">-1</span>) &#123;</span><br><span class="line">            f(f, ch[x][<span class="number">1</span>], cur + (ch[x][<span class="number">0</span>] != <span class="number">-1</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    dfs(dfs, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; n - ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -239,13 +239,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/05/20/SRM786div1-Medium-ModCounters/" rel="prev" title="SRM786div1 Medium - ModCounters">
-      <i class="fa fa-chevron-left"></i> SRM786div1 Medium - ModCounters
+    <a href="/2021/02/12/SoundHound-Inc-Programming-Contest-2018-Masters-Tournament-E-Graph/" rel="prev" title="SoundHound Inc. Programming Contest 2018 -Masters Tournament- E - + Graph">
+      <i class="fa fa-chevron-left"></i> SoundHound Inc. Programming Contest 2018 -Masters Tournament- E - + Graph
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/05/30/Codeforces-1358E-Are-You-Fired/" rel="next" title="Codeforces 1358E - Are You Fired?">
-      Codeforces 1358E - Are You Fired? <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
