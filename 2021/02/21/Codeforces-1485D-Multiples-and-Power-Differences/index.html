@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:AGC034C - Tests">
+  <meta name="description" content="Link:Codeforces 1485D - Multiples and Power Differences">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AGC034C - Tests">
-<meta property="og:url" content="http://yoursite.com/2020/06/28/AGC034C-Tests/index.html">
+<meta property="og:title" content="Codeforces 1485D - Multiples and Power Differences">
+<meta property="og:url" content="http://yoursite.com/2021/02/21/Codeforces-1485D-Multiples-and-Power-Differences/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:AGC034C - Tests">
+<meta property="og:description" content="Link:Codeforces 1485D - Multiples and Power Differences">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-28T11:21:57.000Z">
-<meta property="article:modified_time" content="2020-06-28T11:25:22.797Z">
+<meta property="article:published_time" content="2021-02-21T02:00:47.000Z">
+<meta property="article:modified_time" content="2021-02-21T02:03:13.994Z">
 <meta property="article:author" content="meox">
-<meta property="article:tag" content="Atcoder">
+<meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/28/AGC034C-Tests/">
+<link rel="canonical" href="http://yoursite.com/2021/02/21/Codeforces-1485D-Multiples-and-Power-Differences/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>AGC034C - Tests | meox</title>
+  <title>Codeforces 1485D - Multiples and Power Differences | meox</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/AGC034C-Tests/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/21/Codeforces-1485D-Multiples-and-Power-Differences/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ada.jpeg">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AGC034C - Tests
+          Codeforces 1485D - Multiples and Power Differences
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-06-28 19:21:57 / Modified: 19:25:22" itemprop="dateCreated datePublished" datetime="2020-06-28T19:21:57+08:00">2020-06-28</time>
+              <time title="Created: 2021-02-21 10:00:47 / Modified: 10:03:13" itemprop="dateCreated datePublished" datetime="2021-02-21T10:00:47+08:00">2021-02-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,15 +213,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/agc034/tasks/agc034_c" target="_blank" rel="noopener">AGC034C - Tests</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://codeforces.com/problemset/problem/1485/D" target="_blank" rel="noopener">Codeforces 1485D - Multiples and Power Differences</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>一般。</p>
-<p>问题在于这个分段不好处理。<br>仔细思考一下，最后选的能够得分的考试肯定是一个没满的和几个考满的，可以把分数看成一个分段函数，分成两段。<br>那么枚举一下这个不满的函数，然后二分选几个满的，这里满足二分性，再二分这门课该考几分，更新答案即可。</p>
-<p>时间复杂度$O(nlogn)$。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>不会构造，没有脑子。</p>
+<p>首先想到了每个格子放$lcm$，然后就不会了。这里其实仍然是黑白染色的套路，那么黑白染色格子，黑格子放上$a^4$即可。</p>
+<p>时间复杂度$O(nm)$。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> n, x;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; x;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">b</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">l</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">u</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; b[i] &gt;&gt; l[i] &gt;&gt; u[i];</span><br><span class="line">		sum += b[i] * l[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">auto</span> calc = [&amp;] (<span class="keyword">int</span> i) &#123;</span><br><span class="line">		<span class="keyword">return</span> b[i] * l[i] + (x - b[i]) * u[i];</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">id</span><span class="params">(n)</span></span>;</span><br><span class="line">	iota(id.begin(), id.end(), <span class="number">0</span>);</span><br><span class="line">	sort(id.begin(), id.end(), [&amp;] (<span class="keyword">int</span> i, <span class="keyword">int</span> j) &#123;</span><br><span class="line">		<span class="keyword">return</span> calc(i) &gt; calc(j);</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">pre</span><span class="params">(n)</span></span>;</span><br><span class="line">	pre[<span class="number">0</span>] = calc(id[<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i + <span class="number">1</span> &lt; n; ++i) &#123;</span><br><span class="line">		pre[i + <span class="number">1</span>] = pre[i] + calc(id[i + <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">1L</span>L * n * x;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> j = id[i];</span><br><span class="line">		<span class="keyword">int</span> left = <span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">int</span> right = n;</span><br><span class="line">		<span class="keyword">int</span> cur = n;</span><br><span class="line">		<span class="keyword">while</span>(right - left &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> mid = left + right &gt;&gt; <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">int</span> p = mid - <span class="number">1</span> + (mid &gt;= i + <span class="number">1</span>);</span><br><span class="line">			<span class="keyword">if</span>((p &gt;= <span class="number">0</span> ? pre[p] : <span class="number">0</span>) + (mid - <span class="number">1</span> &lt; i ? calc(j) : <span class="number">0</span>) &gt;= sum) &#123;</span><br><span class="line">				right = cur = mid;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				left = mid;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		left = <span class="number">-1</span>;</span><br><span class="line">		right = x + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> pos = x;</span><br><span class="line">		<span class="keyword">while</span>(right - left &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> mid = left + right &gt;&gt; <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">long</span> <span class="keyword">long</span> add = l[j] * min(<span class="number">1L</span>L * mid, b[j]) + u[j] * max(<span class="number">0L</span>L, mid - b[j]);</span><br><span class="line">			<span class="keyword">int</span> p = cur &gt;= i + <span class="number">1</span> ? cur : cur - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(add + (p &gt;= <span class="number">0</span> ? pre[p] : <span class="number">0</span>) - (cur &gt;= i + <span class="number">1</span> ? calc(j) : <span class="number">0</span>) &gt;= sum) &#123;</span><br><span class="line">				right = pos = mid;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				left = mid;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		ans = min(ans, <span class="number">1L</span>L * cur * x + pos);</span><br><span class="line">	&#125;	</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n, m;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; <span class="title">a</span><span class="params">(n, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; (m))</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; ++j) &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> lcm = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">16</span>; ++i) &#123;</span><br><span class="line">        lcm = lcm * i / __gcd(lcm, i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; ++j) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; (((i + j) &amp; <span class="number">1</span>) ? lcm : lcm + a[i][j] * a[i][j] * a[i][j] * a[i][j]) &lt;&lt; <span class="string">" \n"</span>[j == m - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -231,7 +231,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Atcoder/" rel="tag"># Atcoder</a>
+              <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
           </div>
 
         
@@ -240,13 +240,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/27/ABC172F-Unfair-Nim/" rel="prev" title="ABC172F - Unfair Nim">
-      <i class="fa fa-chevron-left"></i> ABC172F - Unfair Nim
+    <a href="/2021/02/18/Codeforces-1446C-Xor-Tree/" rel="prev" title="Codeforces 1446C - Xor Tree">
+      <i class="fa fa-chevron-left"></i> Codeforces 1446C - Xor Tree
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/28/AGC033C-Removing-Coins/" rel="next" title="AGC033C - Removing Coins">
-      AGC033C - Removing Coins <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
