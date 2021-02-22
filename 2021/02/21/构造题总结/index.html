@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言:发现自己对于构造以及智商题这一方面极其欠缺，思来想去觉得上不了分的原因也是不擅长这类ad-hoc Problems。于是难得按照专题去刷一些题。自认为不会构造题的关键在于模型比较陌生，没有一个突破口，所以多刷一些题，积累一些模型可能会有一些效果？当然不一定只包含纯正的构造题，也会包含一些贪心之类的问题，这里更像是一个ad-hoc Problem的汇总？其实是懒得写题解了(雾)。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-21T11:33:59.000Z">
-<meta property="article:modified_time" content="2021-02-22T01:13:17.582Z">
+<meta property="article:modified_time" content="2021-02-22T01:15:05.211Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="总结">
 <meta name="twitter:card" content="summary">
@@ -196,7 +196,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-02-22 09:13:17" itemprop="dateModified" datetime="2021-02-22T09:13:17+08:00">2021-02-22</time>
+                <time title="Modified: 2021-02-22 09:15:05" itemprop="dateModified" datetime="2021-02-22T09:15:05+08:00">2021-02-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -225,11 +225,11 @@
 <hr>
 <h1 id="Problems"><a href="#Problems" class="headerlink" title="Problems:"></a>Problems:</h1><p>大概是做过的一些题目，可以供自己复习，或者归纳总结其中的套路，又或者进一步思考其中根本的思想。<br>题号会和以往的博客不太相同，尽量简写题号。</p>
 <hr>
-<h2 id="网格类问题"><a href="#网格类问题" class="headerlink" title="网格类问题"></a>网格类问题</h2><p><strong>CF1485D(2200)</strong><br>网格图黑白染色。<br>写过<a href="https://meox3259.github.io/2021/02/21/Codeforces-1485D-Multiples-and-Power-Differences/" target="_blank" rel="noopener">题解</a>，是一个基本的黑白染色模型，由于是要求相邻格子的差满足某些性质，染色后变成了满足黑格子与白格子的某些性质。</p>
+<h2 id="网格类问题"><a href="#网格类问题" class="headerlink" title="网格类问题"></a>网格类问题</h2><h3 id="CF1485D-2200"><a href="#CF1485D-2200" class="headerlink" title="CF1485D(2200)"></a>CF1485D(2200)</h3><p><strong>网格图黑白染色。</strong><br>写过<a href="https://meox3259.github.io/2021/02/21/Codeforces-1485D-Multiples-and-Power-Differences/" target="_blank" rel="noopener">题解</a>，是一个基本的黑白染色模型，由于是要求相邻格子的差满足某些性质，染色后变成了满足黑格子与白格子的某些性质。</p>
 <hr>
-<p><strong>CF1392E(2100)</strong><br>网格图曼哈顿距离分层。<br><a href="https://codeforces.com/contest/1392/problem/E" target="_blank" rel="noopener">链接</a>。要求构造一个矩阵，进行$q$次询问，每次告诉你路径的权值，让你确定路径。路径唯一自然想到二进制，直接构造需要$2^{25^2}$个数，不满足要求，需要压缩二进制的数量。最多能接受$2^{50}$个不同的二进制位，考虑利用曼哈顿距离对网格图分层，那么每一条斜线到$(1,1)$的曼哈顿距离相同，一共有$2^{2n-1}$层，对于每层$0$和$2^i$相间放，表示可以选或不选。每次每走一步曼哈顿距离$+1$，自然会走到下一层。</p>
+<h3 id="CF1392E-2100"><a href="#CF1392E-2100" class="headerlink" title="CF1392E(2100)"></a>CF1392E(2100)</h3><p><strong>网格图曼哈顿距离分层。</strong><br><a href="https://codeforces.com/contest/1392/problem/E" target="_blank" rel="noopener">链接</a>。要求构造一个矩阵，进行$q$次询问，每次告诉你路径的权值，让你确定路径。路径唯一自然想到二进制，直接构造需要$2^{25^2}$个数，不满足要求，需要压缩二进制的数量。最多能接受$2^{50}$个不同的二进制位，考虑利用曼哈顿距离对网格图分层，那么每一条斜线到$(1,1)$的曼哈顿距离相同，一共有$2^{2n-1}$层，对于每层$0$和$2^i$相间放，表示可以选或不选。每次每走一步曼哈顿距离$+1$，自然会走到下一层。</p>
 <hr>
-<h2 id="图上路径问题"><a href="#图上路径问题" class="headerlink" title="图上路径问题"></a>图上路径问题</h2><p><strong>CF1479C/ARC102D(2500)</strong><br>二进制数位$dp$/图建模。<br>写过<a href="https://meox3259.github.io/2021/02/21/Codeforces-1479C-Continuous-City/" target="_blank" rel="noopener">题解</a>，两道题的思想是几乎相同的，区别在于对于$2^i$的处理，剩下的难点在于类似数位$dp$的处理。</p>
+<h2 id="图上路径问题"><a href="#图上路径问题" class="headerlink" title="图上路径问题"></a>图上路径问题</h2><h3 id="CF1479C-ARC102D-2500"><a href="#CF1479C-ARC102D-2500" class="headerlink" title="CF1479C/ARC102D(2500)"></a>CF1479C/ARC102D(2500)</h3><p><strong>二进制数位$dp$/图建模。</strong><br>写过<a href="https://meox3259.github.io/2021/02/21/Codeforces-1479C-Continuous-City/" target="_blank" rel="noopener">题解</a>，两道题的思想是几乎相同的，区别在于对于$2^i$的处理，剩下的难点在于类似数位$dp$的处理。</p>
 
     </div>
 
@@ -311,7 +311,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problems"><span class="nav-number">2.</span> <span class="nav-text">Problems:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网格类问题"><span class="nav-number">2.1.</span> <span class="nav-text">网格类问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图上路径问题"><span class="nav-number">2.2.</span> <span class="nav-text">图上路径问题</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problems"><span class="nav-number">2.</span> <span class="nav-text">Problems:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网格类问题"><span class="nav-number">2.1.</span> <span class="nav-text">网格类问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1485D-2200"><span class="nav-number">2.1.1.</span> <span class="nav-text">CF1485D(2200)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1392E-2100"><span class="nav-number">2.1.2.</span> <span class="nav-text">CF1392E(2100)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图上路径问题"><span class="nav-number">2.2.</span> <span class="nav-text">图上路径问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1479C-ARC102D-2500"><span class="nav-number">2.2.1.</span> <span class="nav-text">CF1479C&#x2F;ARC102D(2500)</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
