@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:AGC041C - Domino Quality">
+  <meta name="description" content="Link:Codeforces 1442A - Extreme Subtraction">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AGC041C - Domino Quality">
-<meta property="og:url" content="http://yoursite.com/2020/06/10/AGC041C-Domino-Quality/index.html">
+<meta property="og:title" content="Codeforces 1442A - Extreme Subtraction">
+<meta property="og:url" content="http://yoursite.com/2021/03/03/Codeforces-1442A-Extreme-Subtraction/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:AGC041C - Domino Quality">
+<meta property="og:description" content="Link:Codeforces 1442A - Extreme Subtraction">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-09T16:49:57.000Z">
-<meta property="article:modified_time" content="2020-06-09T16:54:54.579Z">
+<meta property="article:published_time" content="2021-03-03T02:18:07.000Z">
+<meta property="article:modified_time" content="2021-03-03T02:25:24.583Z">
 <meta property="article:author" content="meox">
-<meta property="article:tag" content="Atcoder">
+<meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/10/AGC041C-Domino-Quality/">
+<link rel="canonical" href="http://yoursite.com/2021/03/03/Codeforces-1442A-Extreme-Subtraction/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>AGC041C - Domino Quality | meox</title>
+  <title>Codeforces 1442A - Extreme Subtraction | meox</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/10/AGC041C-Domino-Quality/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/03/Codeforces-1442A-Extreme-Subtraction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ada.jpeg">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AGC041C - Domino Quality
+          Codeforces 1442A - Extreme Subtraction
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-06-10 00:49:57 / Modified: 00:54:54" itemprop="dateCreated datePublished" datetime="2020-06-10T00:49:57+08:00">2020-06-10</time>
+              <time title="Created: 2021-03-03 10:18:07 / Modified: 10:25:24" itemprop="dateCreated datePublished" datetime="2021-03-03T10:18:07+08:00">2021-03-03</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,15 +213,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/agc041/tasks/agc041_c" target="_blank" rel="noopener">AGC041C - Domino Quality</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://codeforces.com/contest/1442/problem/A" target="_blank" rel="noopener">Codeforces 1442A - Extreme Subtraction</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>一个技巧，拼接。</p>
-<p>经过各种手玩，并没有看出什么，然后就没有然后了。<br>从小考虑，发现$n \leq 2$时无解，其他都有解。对于一个大小为$x+y$的正方形，可以把他分解成$x$和$y$的正方形拼接而成。那么手动构造几个比较小的，之后用拼接即可。</p>
-<p>时间复杂度$O(n^2)$，对于一些问题，可以先求出比较小的，然后通过小的得出，拼接出大的，要有这种类似数学归纳的思想。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>非常不擅长的题型。根据题解，可以把问题转化成这样一个模型:对于第$i$个位置从头减的数是$u_i$，从后减的数是$d_i$，那么可以推出$u_i+d_i=a_i$，还有$u$是不增的，$d$是不降的。<br>根据以上的条件，可以化一下式子，得出$u_i \leq u_{i - 1}$，$d_i \geq d_{i - 1}$。那么可以推出$u_i \leq min(a_{i - 1} - d_{i - 1}, u_{i - 1})$，那么自然希望最大化每个位置的$u_i$，所以递推出整个序列判断合法即可。</p>
+<p>时间复杂度$O(n)$。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; p[<span class="number">8</span>] = &#123;</span><br><span class="line">	&#123;&#125;, </span><br><span class="line"></span><br><span class="line">	&#123;&#125;, </span><br><span class="line"></span><br><span class="line">	&#123;&#125;,</span><br><span class="line"> </span><br><span class="line">	&#123;<span class="string">"aa."</span>,</span><br><span class="line">  	<span class="string">"..a"</span>,</span><br><span class="line">  	<span class="string">"..a"</span>&#125;,</span><br><span class="line"> </span><br><span class="line"> 	&#123;<span class="string">"aabc"</span>,</span><br><span class="line">  	<span class="string">"ddbc"</span>,</span><br><span class="line">  	<span class="string">"bcaa"</span>,</span><br><span class="line">  	<span class="string">"bcdd"</span>&#125;,</span><br><span class="line"> </span><br><span class="line"> 	&#123;<span class="string">"aabba"</span>,</span><br><span class="line">  	<span class="string">"bcc.a"</span>,</span><br><span class="line">  	<span class="string">"b..cb"</span>,</span><br><span class="line">  	<span class="string">"a..cb"</span>,</span><br><span class="line">  	<span class="string">"abbaa"</span>&#125;,</span><br><span class="line"> </span><br><span class="line"> 	&#123;<span class="string">"aabc.."</span>,</span><br><span class="line">  	<span class="string">"ddbc.."</span>,</span><br><span class="line">  	<span class="string">"..aabc"</span>,</span><br><span class="line">  	<span class="string">"..ddbc"</span>,</span><br><span class="line">  	<span class="string">"bc..aa"</span>,</span><br><span class="line">  	<span class="string">"bc..dd"</span>&#125;,</span><br><span class="line"> </span><br><span class="line"> 	&#123;<span class="string">"aabbcc."</span>,</span><br><span class="line">  	<span class="string">"dd.dd.a"</span>,</span><br><span class="line">  	<span class="string">"..d..da"</span>,</span><br><span class="line">  	<span class="string">"..d..db"</span>,</span><br><span class="line">  	<span class="string">"dd.dd.b"</span>,</span><br><span class="line">  	<span class="string">"..d..dc"</span>,</span><br><span class="line">  	<span class="string">"..d..dc"</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(n &lt;= <span class="number">2</span>) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; <span class="title">s</span><span class="params">(n, <span class="built_in">string</span>(n, <span class="string">'.'</span>))</span></span>;</span><br><span class="line"></span><br><span class="line">	function&lt;<span class="keyword">void</span>(<span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">int</span>)&gt; draw = [&amp;] (<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> w) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; w; ++i) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; w; ++j) &#123;</span><br><span class="line">				s[i + x][j + y] = p[w][i][j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(n &gt;= <span class="number">8</span>) &#123;</span><br><span class="line">		draw(n - <span class="number">4</span>, n - <span class="number">4</span>, <span class="number">4</span>);</span><br><span class="line">		n -= <span class="number">4</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	draw(<span class="number">0</span>, <span class="number">0</span>, n);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.size(); ++i) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; s[i] &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">1000000000</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> T;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; T;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(T--) &#123;</span><br><span class="line">		<span class="keyword">int</span> n;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">            a[<span class="number">0</span>] += min(<span class="number">0</span>, a[i + <span class="number">1</span>] - a[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (a[<span class="number">0</span>] &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"YES"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"NO"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -231,7 +230,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Atcoder/" rel="tag"># Atcoder</a>
+              <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
           </div>
 
         
@@ -240,13 +239,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/06/SRM584div1-Medium-Excavations/" rel="prev" title="SRM584div1 Medium - Excavations">
-      <i class="fa fa-chevron-left"></i> SRM584div1 Medium - Excavations
+    <a href="/2021/03/03/ARC104E-Random-LIS/" rel="prev" title="ARC104E - Random LIS">
+      <i class="fa fa-chevron-left"></i> ARC104E - Random LIS
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/15/AGC037C-Numbers-on-a-Circle/" rel="next" title="AGC037C - Numbers on a Circle">
-      AGC037C - Numbers on a Circle <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
