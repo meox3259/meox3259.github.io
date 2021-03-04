@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:KEYENCE Programming Contest 2021 D - Choosing Up Sides">
+  <meta name="description" content="Link:AGC031C - Differ by 1 Bit">
 <meta property="og:type" content="article">
-<meta property="og:title" content="KEYENCE Programming Contest 2021 D - Choosing Up Sides">
-<meta property="og:url" content="http://yoursite.com/2021/03/03/KEYENCE-Programming-Contest-2021-D-Choosing-Up-Sides/index.html">
+<meta property="og:title" content="AGC031C - Differ by 1 Bit">
+<meta property="og:url" content="http://yoursite.com/2021/03/04/AGC031C-Differ-by-1-Bit/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:KEYENCE Programming Contest 2021 D - Choosing Up Sides">
+<meta property="og:description" content="Link:AGC031C - Differ by 1 Bit">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-03T03:42:12.000Z">
-<meta property="article:modified_time" content="2021-03-03T04:20:13.659Z">
+<meta property="article:published_time" content="2021-03-04T00:21:55.000Z">
+<meta property="article:modified_time" content="2021-03-04T00:37:25.690Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Atcoder">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2021/03/03/KEYENCE-Programming-Contest-2021-D-Choosing-Up-Sides/">
+<link rel="canonical" href="http://yoursite.com/2021/03/04/AGC031C-Differ-by-1-Bit/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>KEYENCE Programming Contest 2021 D - Choosing Up Sides | meox</title>
+  <title>AGC031C - Differ by 1 Bit | meox</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/03/KEYENCE-Programming-Contest-2021-D-Choosing-Up-Sides/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/04/AGC031C-Differ-by-1-Bit/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ada.jpeg">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          KEYENCE Programming Contest 2021 D - Choosing Up Sides
+          AGC031C - Differ by 1 Bit
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-03-03 11:42:12 / Modified: 12:20:13" itemprop="dateCreated datePublished" datetime="2021-03-03T11:42:12+08:00">2021-03-03</time>
+              <time title="Created: 2021-03-04 08:21:55 / Modified: 08:37:25" itemprop="dateCreated datePublished" datetime="2021-03-04T08:21:55+08:00">2021-03-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,14 +213,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/keyence2021/tasks/keyence2021_d" target="_blank" rel="noopener">KEYENCE Programming Contest 2021 D - Choosing Up Sides</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/agc031/tasks/agc031_c" target="_blank" rel="noopener">AGC031C - Differ by 1 Bit</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>有迹可循的构造题。首先要确定最少的次数，考虑列等式算一算，可以得出这样的式子:<br>$$(n+m)M^2=m\tbinom{2M}{2}$$<br>可以得出$n:m=M-1:M$，其中$M=2^{N-1}$。<br>那么$n+m$至少为$2^N-1$，当然其实$2^N-1$就行。<br>然后考虑构造，比赛的时候也卡在了这里，首先构造需要满足两个要求，一个是$n:m=M-1:M$，另一个是每个人都相同。<br>由于二进制空间下$0$和$1$是等价的，因为把$0$和$1$反转没有区别，所以考虑利用二进制表示每个人。<br>由于轮数有$2^N-1$轮，缺少了$0$，所以可以按$popcount(S)$的奇偶进行分类。<br>对于第$i$轮，第$j$个人被分配在$popcount(i&amp;j)&amp;1$组，可以发现上面进行奇偶分类后每类的人都是等价的，所以满足条件。</p>
-<p>时间复杂度$O(4^n)$。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>思考很长时间发现直接构造很困难，看了看题解。<br>首先判是否有解，只要看$A$与$B$有多少位不相同即可，如果奇数则可行，否则不可行，这里比较显然。<br>然后题解这里利用了一个类似数学归纳法的分治，面对这种单个数字的构造一般考虑数学归纳法。<br>问题在于怎么分，对于$A$和$B$，希望找到一个中间数$mid$使得可以构造$(A,mid)$和$(mid|bit,B)$，那么$A$到$mid$和$mid|bit$到$B$都需要有奇数位不同，所以这个$bit$需要$A$和$B$在$bit$位不同。<br>考虑找这个$mid$，要满足之前奇数位不同的条件。二进制下有个常见的分类，假设当前有$2^n$，可以分成$2^{n-1}$与$2^{n-1}$，同时最高位分别为$0$和$1$，本质上是一个超$n$维的体可以分成两个超$n-1$维的体，在一个位分别为$0$和$1$。<br>然后先找一个没有被选定过的位$j$，递归解决$(A,mid|j)$和$(mid,B)$，把$bit$位改成选中表示这位不能随便改。</p>
+<p>时间复杂度$O(2^nn^2)$。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (<span class="number">1</span> &lt;&lt; n) - <span class="number">1</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">1</span> &lt;&lt; n; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">1</span> &lt;&lt; n; ++j) &#123;</span><br><span class="line">            <span class="keyword">if</span> (__builtin_popcount(i &amp; j) &amp; <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; <span class="string">'B'</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; <span class="string">'A'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">  <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line">  <span class="keyword">int</span> N, A, B;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; A &gt;&gt; B;</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ans;</span><br><span class="line">  <span class="keyword">auto</span> dfs = [&amp;] (<span class="keyword">auto</span> &amp;&amp;f, <span class="keyword">int</span> X, <span class="keyword">int</span> Y, <span class="keyword">int</span> S) -&gt; <span class="keyword">void</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (__builtin_popcount(S ^ ((<span class="number">1</span> &lt;&lt; N) - <span class="number">1</span>)) == <span class="number">1</span>) &#123;</span><br><span class="line">      ans.push_back(X);</span><br><span class="line">      ans.push_back(Y);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">      <span class="keyword">if</span> ((X &gt;&gt; i &amp; <span class="number">1</span>) ^ (Y &gt;&gt; i &amp; <span class="number">1</span>)) &#123;</span><br><span class="line">        S ^= <span class="number">1</span> &lt;&lt; i;</span><br><span class="line">        <span class="keyword">int</span> mid = X;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N; ++j) &#123;</span><br><span class="line">          <span class="keyword">if</span> (!(S &gt;&gt; j &amp; <span class="number">1</span>)) &#123;</span><br><span class="line">            mid ^= <span class="number">1</span> &lt;&lt; j; </span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        f(f, X, mid, S);</span><br><span class="line">        f(f, mid ^ (<span class="number">1</span> &lt;&lt; i), Y, S);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">if</span> (__builtin_popcount(A ^ B) &amp; <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"YES"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    dfs(dfs, A, B, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (<span class="number">1</span> &lt;&lt; N); ++i) &#123;</span><br><span class="line">      <span class="built_in">cout</span> &lt;&lt; ans[i] &lt;&lt; <span class="string">" \n"</span>[i == (<span class="number">1</span> &lt;&lt; N) - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"NO"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -239,13 +239,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/03/Codeforces-1442A-Extreme-Subtraction/" rel="prev" title="Codeforces 1442A - Extreme Subtraction">
-      <i class="fa fa-chevron-left"></i> Codeforces 1442A - Extreme Subtraction
+    <a href="/2021/03/04/ARC105E-Keep-Graph-Disconnected/" rel="prev" title="ARC105E - Keep Graph Disconnected">
+      <i class="fa fa-chevron-left"></i> ARC105E - Keep Graph Disconnected
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/04/ARC105E-Keep-Graph-Disconnected/" rel="next" title="ARC105E - Keep Graph Disconnected">
-      ARC105E - Keep Graph Disconnected <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
