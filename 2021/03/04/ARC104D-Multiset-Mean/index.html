@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:AGC033B - LRUD Game">
+  <meta name="description" content="Link:ARC104D - Multiset Mean">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AGC033B - LRUD Game">
-<meta property="og:url" content="http://yoursite.com/2020/06/29/AGC033B-LRUD-Game/index.html">
+<meta property="og:title" content="ARC104D - Multiset Mean">
+<meta property="og:url" content="http://yoursite.com/2021/03/04/ARC104D-Multiset-Mean/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:AGC033B - LRUD Game">
+<meta property="og:description" content="Link:ARC104D - Multiset Mean">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-29T12:13:58.000Z">
-<meta property="article:modified_time" content="2020-06-29T12:16:55.518Z">
+<meta property="article:published_time" content="2021-03-04T03:27:47.000Z">
+<meta property="article:modified_time" content="2021-03-04T03:35:29.418Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Atcoder">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/29/AGC033B-LRUD-Game/">
+<link rel="canonical" href="http://yoursite.com/2021/03/04/ARC104D-Multiset-Mean/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>AGC033B - LRUD Game | meox</title>
+  <title>ARC104D - Multiset Mean | meox</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/29/AGC033B-LRUD-Game/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/04/ARC104D-Multiset-Mean/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ada.jpeg">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AGC033B - LRUD Game
+          ARC104D - Multiset Mean
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-06-29 20:13:58 / Modified: 20:16:55" itemprop="dateCreated datePublished" datetime="2020-06-29T20:13:58+08:00">2020-06-29</time>
+              <time title="Created: 2021-03-04 11:27:47 / Modified: 11:35:29" itemprop="dateCreated datePublished" datetime="2021-03-04T11:27:47+08:00">2021-03-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,15 +213,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/agc033/tasks/agc033_b" target="_blank" rel="noopener">AGC033B - LRUD Game</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/arc104/tasks/arc104_d" target="_blank" rel="noopener">ARC104D - Multiset Mean</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>不难，但卡了一会。</p>
-<p>首先想，如果逆操作都在第一个人的后面的话，那么第二个人永远能控制局面。<br>于是把逆序对操作都碰掉，剩下的相当于第二个人操作完，然后第一个人操作，枚举一下就行。<br>还要判断会不会被直接跑死。</p>
-<p>时间复杂度$O(n)$。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>看到平均值自然想到可以枚举平均值然后背包dp，但是一直只能想到$O(N^4K^2)$的复杂度，没有想到优化的办法，只能说思维僵化。<br>首先枚举平均值$X$后，把每个数减去平均值，那么当前可选的值域范围是$[-X+1,N-X]$，需要选出的数最终和为$0$。这里直接跑背包$dp$复杂度太高，转化一下发现相当于选一些$[1,X-1]$和$[1,N-X]$的数使得和相同，那么就省略了对于每个$X$单独跑$dp$的过程，可以提前预处理，时间复杂度$O(N^3K^2)$。<br>最后的瓶颈在于每个物品可以选$K$个，这里一般比较可以用前缀和优化，那么做一个$K$的同余的前缀和即可。</p>
+<p>时间复杂度$O(N^3K)$。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> h, w;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; h &gt;&gt; w;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> sr, sc;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; sr &gt;&gt; sc;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">string</span> s;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">string</span> t;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">map</span>&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; id;</span><br><span class="line">	id[<span class="string">'L'</span>] = <span class="number">0</span>;</span><br><span class="line">	id[<span class="string">'R'</span>] = <span class="number">1</span>;</span><br><span class="line">	id[<span class="string">'U'</span>] = <span class="number">2</span>;</span><br><span class="line">	id[<span class="string">'D'</span>] = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">cnts</span><span class="params">(<span class="number">4</span>)</span></span>;</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">cntt</span><span class="params">(<span class="number">4</span>)</span></span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		cnts[id[s[i]]] += <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(sr - cnts[<span class="number">2</span>] + cntt[<span class="number">3</span>] &lt;= <span class="number">0</span> || sr + cnts[<span class="number">3</span>] - cntt[<span class="number">2</span>] &gt; h || sc - cnts[<span class="number">0</span>] + cntt[<span class="number">1</span>] &lt;= <span class="number">0</span> || sc + cnts[<span class="number">1</span>] - cntt[<span class="number">0</span>] &gt; w) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"NO"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">			<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(cnts[id[t[i]] ^ <span class="number">1</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			cnts[id[t[i]] ^ <span class="number">1</span>] -= <span class="number">1</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			cntt[id[t[i]]] += <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">bool</span> okw = <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = -cntt[<span class="number">0</span>]; i &lt;= cntt[<span class="number">1</span>]; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> cur = sc + i;</span><br><span class="line">		<span class="keyword">if</span>(<span class="number">1</span> &lt;= cur - cnts[<span class="number">0</span>] &amp;&amp; cur + cnts[<span class="number">1</span>] &lt;= w) &#123;</span><br><span class="line">			okw = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">bool</span> okh = <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = -cntt[<span class="number">2</span>]; i &lt;= cntt[<span class="number">3</span>]; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> cur = sr + i;</span><br><span class="line">		<span class="keyword">if</span>(<span class="number">1</span> &lt;= cur - cnts[<span class="number">2</span>] &amp;&amp; cur + cnts[<span class="number">3</span>] &lt;= h) &#123;</span><br><span class="line">			okh = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(okw &amp;&amp; okh) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"YES"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"NO"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> N, K, P;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; K &gt;&gt; P;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">dp</span><span class="params">(N + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; (N * (N + <span class="number">1</span>) / <span class="number">2</span> * K + <span class="number">1</span>))</span></span>;</span><br><span class="line">  dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; ++i) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= i * (i + <span class="number">1</span>) / <span class="number">2</span> * K; ++j) &#123;</span><br><span class="line">      dp[i][j] = dp[i - <span class="number">1</span>][j];  </span><br><span class="line">      <span class="keyword">if</span> (j &gt;= i) &#123;</span><br><span class="line">        dp[i][j] += dp[i][j - i];</span><br><span class="line">        dp[i][j] %= P;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = i * (i + <span class="number">1</span>) / <span class="number">2</span> * K; j &gt;= (K + <span class="number">1</span>) * i; --j) &#123;</span><br><span class="line">      dp[i][j] -= dp[i][j - (K + <span class="number">1</span>) * i];</span><br><span class="line">      dp[i][j] += P;</span><br><span class="line">      dp[i][j] %= P;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> X = <span class="number">1</span>; X &lt;= N; ++X) &#123;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= N * (N + <span class="number">1</span>) / <span class="number">2</span> * K; ++i) &#123;</span><br><span class="line">      ans += <span class="number">1L</span>L * dp[X - <span class="number">1</span>][i] * dp[N - X][i] % P;</span><br><span class="line">      ans %= P;</span><br><span class="line">    &#125;</span><br><span class="line">    ans = <span class="number">1L</span>L * ans * (K + <span class="number">1</span>) % P;</span><br><span class="line">    ans -= <span class="number">1</span>;</span><br><span class="line">    ans += P;</span><br><span class="line">    ans %= P;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -240,13 +239,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/29/AGC034E-Complete-Compress/" rel="prev" title="AGC034E - Complete Compress">
-      <i class="fa fa-chevron-left"></i> AGC034E - Complete Compress
+    <a href="/2021/03/04/ARC106E-Medals/" rel="prev" title="ARC106E - Medals">
+      <i class="fa fa-chevron-left"></i> ARC106E - Medals
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/01/SRM580div1-Medium-ShoutterDiv1/" rel="next" title="SRM580div1 Medium - ShoutterDiv1">
-      SRM580div1 Medium - ShoutterDiv1 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
