@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:AGC033C - Removing Coins">
+  <meta name="description" content="Link:Codeforces 1208G - Polygons">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AGC033C - Removing Coins">
-<meta property="og:url" content="http://yoursite.com/2020/06/28/AGC033C-Removing-Coins/index.html">
+<meta property="og:title" content="Codeforces 1208G - Polygons">
+<meta property="og:url" content="http://yoursite.com/2021/03/27/Codeforces-1208G-Polygons/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:AGC033C - Removing Coins">
+<meta property="og:description" content="Link:Codeforces 1208G - Polygons">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-28T12:28:46.000Z">
-<meta property="article:modified_time" content="2020-06-28T12:53:04.257Z">
+<meta property="article:published_time" content="2021-03-27T15:40:07.000Z">
+<meta property="article:modified_time" content="2021-03-27T15:45:54.177Z">
 <meta property="article:author" content="meox">
-<meta property="article:tag" content="Atcoder">
+<meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/28/AGC033C-Removing-Coins/">
+<link rel="canonical" href="http://yoursite.com/2021/03/27/Codeforces-1208G-Polygons/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>AGC033C - Removing Coins | meox</title>
+  <title>Codeforces 1208G - Polygons | meox</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/AGC033C-Removing-Coins/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/27/Codeforces-1208G-Polygons/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ada.jpeg">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AGC033C - Removing Coins
+          Codeforces 1208G - Polygons
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-06-28 20:28:46 / Modified: 20:53:04" itemprop="dateCreated datePublished" datetime="2020-06-28T20:28:46+08:00">2020-06-28</time>
+              <time title="Created: 2021-03-27 23:40:07 / Modified: 23:45:54" itemprop="dateCreated datePublished" datetime="2021-03-27T23:40:07+08:00">2021-03-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,15 +213,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/agc033/tasks/agc033_c" target="_blank" rel="noopener">AGC033C - Removing Coins</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://codeforces.com/contest/1208/problem/G" target="_blank" rel="noopener">Codeforces 1208G - Polygons</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>不会证明。</p>
-<p>首先发现本质上是删除除了当前点的其他叶子，那么肯定是依靠直径，确实也是这样，然后就是计算谁会赢，每次可以取走一个石子或两个石子，$dp$一下就行了。<br>有一个问题稍微想了一下，如果直径被删没了怎么办，因为非直径和直径每次差距最多减少$1$，那么可以让其他链继承这个直径。</p>
-<p>时间复杂度$O(n)$。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>首先有一个性质，是所有的多边形会有一个重点，当然这个结论只能靠猜。然后考虑放置多边形，由于顶点重合，假设一个$N$边形，那么$N$个点的分布是$\frac{i}[N]$，$i$为$[0,N-1]$。由此可以发现，如果一个多边形的边数为当前$N$的约数并且没选，那么肯定是选这个多边形更优，所以$N$边形被选当且仅当所有的边数为$N$的约数的多边形都被选了，$N$边形会多出$\phi(N)$个顶点。<br>于是按照$\phi(N)$排序贪心地选即可。</p>
+<p>时间复杂度$O(NlogN)$。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; <span class="title">G</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> x, y;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y;</span><br><span class="line">		--x; --y;</span><br><span class="line">		G[x].emplace_back(y);</span><br><span class="line">		G[y].emplace_back(x);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">dep</span><span class="params">(n)</span></span>;</span><br><span class="line">	function&lt;<span class="keyword">void</span>(<span class="keyword">int</span>, <span class="keyword">int</span>)&gt; dfs = [&amp;] (<span class="keyword">int</span> u, <span class="keyword">int</span> f) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> v : G[u]) &#123;</span><br><span class="line">			<span class="keyword">if</span>(v != f) &#123;</span><br><span class="line">				dep[v] = dep[u] + <span class="number">1</span>;</span><br><span class="line">				dfs(v, u);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	dfs(<span class="number">0</span>, <span class="number">-1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> mx = *max_element(dep.begin(), dep.end());</span><br><span class="line">	<span class="keyword">int</span> s = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">if</span>(dep[i] == mx) &#123;</span><br><span class="line">			s = i;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	dep[s] = <span class="number">0</span>;</span><br><span class="line">	dfs(s, <span class="number">-1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> m = *max_element(dep.begin(), dep.end()) + <span class="number">1</span>;</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(m + <span class="number">1</span>)</span></span>;</span><br><span class="line">	dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">		<span class="keyword">if</span>(i + <span class="number">1</span> &lt;= m) &#123;</span><br><span class="line">			dp[i + <span class="number">1</span>] |= !dp[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(i + <span class="number">2</span> &lt;= m) &#123;</span><br><span class="line">			dp[i + <span class="number">2</span>] |= !dp[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(dp[m]) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"First"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"Second"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> N, K;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; K;</span><br><span class="line">  <span class="keyword">if</span> (K == <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="number">3</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; <span class="title">mark</span><span class="params">(N + <span class="number">1</span>)</span></span>;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">Phi</span><span class="params">(N + <span class="number">1</span>)</span></span>;</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; P;</span><br><span class="line">  Phi[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!mark[i]) &#123;</span><br><span class="line">      P.push_back(i);</span><br><span class="line">      Phi[i] = i - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; P.size() &amp;&amp; i * P[j] &lt;= N; ++j) &#123;</span><br><span class="line">      mark[i * P[j]] = <span class="literal">true</span>;</span><br><span class="line">      <span class="keyword">if</span> (i % P[j] == <span class="number">0</span>) &#123;</span><br><span class="line">        Phi[i * P[j]] = Phi[i] * P[j];</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      Phi[i * P[j]] = Phi[i] * Phi[P[j]];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  sort(Phi.begin(), Phi.end());</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; accumulate(Phi.begin(), Phi.begin() + K + <span class="number">3</span>, <span class="number">0L</span>L) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -231,7 +230,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Atcoder/" rel="tag"># Atcoder</a>
+              <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
           </div>
 
         
@@ -240,13 +239,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/28/AGC034C-Tests/" rel="prev" title="AGC034C - Tests">
-      <i class="fa fa-chevron-left"></i> AGC034C - Tests
+    <a href="/2021/03/18/ARC066E-Addition-and-Subtraction-Hard/" rel="prev" title="ARC066E - Addition and Subtraction Hard">
+      <i class="fa fa-chevron-left"></i> ARC066E - Addition and Subtraction Hard
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/29/Codeforces-1373F-Network-Coverage/" rel="next" title="Codeforces 1373F - Network Coverage">
-      Codeforces 1373F - Network Coverage <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
