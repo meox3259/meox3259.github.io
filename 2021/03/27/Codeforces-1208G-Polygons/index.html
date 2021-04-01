@@ -28,7 +28,7 @@
 <meta property="og:description" content="Link:Codeforces 1208G - Polygons">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-27T15:40:07.000Z">
-<meta property="article:modified_time" content="2021-03-27T15:45:54.177Z">
+<meta property="article:modified_time" content="2021-04-01T13:38:32.528Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
@@ -188,10 +188,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-03-27 23:40:07 / Modified: 23:45:54" itemprop="dateCreated datePublished" datetime="2021-03-27T23:40:07+08:00">2021-03-27</time>
+              <time title="Created: 2021-03-27 23:40:07" itemprop="dateCreated datePublished" datetime="2021-03-27T23:40:07+08:00">2021-03-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-01 21:38:32" itemprop="dateModified" datetime="2021-04-01T21:38:32+08:00">2021-04-01</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -217,7 +223,7 @@
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>首先有一个性质，是所有的多边形会有一个重点，当然这个结论只能靠猜。然后考虑放置多边形，由于顶点重合，假设一个$N$边形，那么$N$个点的分布是$\frac{i}[N]$，$i$为$[0,N-1]$。由此可以发现，如果一个多边形的边数为当前$N$的约数并且没选，那么肯定是选这个多边形更优，所以$N$边形被选当且仅当所有的边数为$N$的约数的多边形都被选了，$N$边形会多出$\phi(N)$个顶点。<br>于是按照$\phi(N)$排序贪心地选即可。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>首先有一个性质，是所有的多边形会有一个重点，当然这个结论只能靠猜。然后考虑放置多边形，由于顶点重合，假设一个$N$边形，那么$N$个点的分布是$\frac{i}{N}$，$i$为$[0,N-1]$。由此可以发现，如果一个多边形的边数为当前$N$的约数并且没选，那么肯定是选这个多边形更优，所以$N$边形被选当且仅当所有的边数为$N$的约数的多边形都被选了，$N$边形会多出$\phi(N)$个顶点。<br>于是按照$\phi(N)$排序贪心地选即可。</p>
 <p>时间复杂度$O(NlogN)$。</p>
 <hr>
 <h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> N, K;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; K;</span><br><span class="line">  <span class="keyword">if</span> (K == <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="number">3</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; <span class="title">mark</span><span class="params">(N + <span class="number">1</span>)</span></span>;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">Phi</span><span class="params">(N + <span class="number">1</span>)</span></span>;</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; P;</span><br><span class="line">  Phi[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!mark[i]) &#123;</span><br><span class="line">      P.push_back(i);</span><br><span class="line">      Phi[i] = i - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; P.size() &amp;&amp; i * P[j] &lt;= N; ++j) &#123;</span><br><span class="line">      mark[i * P[j]] = <span class="literal">true</span>;</span><br><span class="line">      <span class="keyword">if</span> (i % P[j] == <span class="number">0</span>) &#123;</span><br><span class="line">        Phi[i * P[j]] = Phi[i] * P[j];</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      Phi[i * P[j]] = Phi[i] * Phi[P[j]];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  sort(Phi.begin(), Phi.end());</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; accumulate(Phi.begin(), Phi.begin() + K + <span class="number">3</span>, <span class="number">0L</span>L) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
