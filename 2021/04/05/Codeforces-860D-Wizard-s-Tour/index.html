@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:AGC028C - Min Cost Cycle">
+  <meta name="description" content="Link:Codeforces 860D - Wizard’s Tour">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AGC028C - Min Cost Cycle">
-<meta property="og:url" content="http://yoursite.com/2021/02/23/AGC028C-Min-Cost-Cycle/index.html">
+<meta property="og:title" content="Codeforces 860D - Wizard&#39;s Tour">
+<meta property="og:url" content="http://yoursite.com/2021/04/05/Codeforces-860D-Wizard-s-Tour/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:AGC028C - Min Cost Cycle">
+<meta property="og:description" content="Link:Codeforces 860D - Wizard’s Tour">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-23T04:53:15.000Z">
-<meta property="article:modified_time" content="2021-04-04T05:46:44.956Z">
+<meta property="article:published_time" content="2021-04-05T03:51:45.000Z">
+<meta property="article:modified_time" content="2021-04-05T07:19:27.591Z">
 <meta property="article:author" content="meox">
-<meta property="article:tag" content="Atcoder">
+<meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2021/02/23/AGC028C-Min-Cost-Cycle/">
+<link rel="canonical" href="http://yoursite.com/2021/04/05/Codeforces-860D-Wizard-s-Tour/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>AGC028C - Min Cost Cycle | meox</title>
+  <title>Codeforces 860D - Wizard's Tour | meox</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/23/AGC028C-Min-Cost-Cycle/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/05/Codeforces-860D-Wizard-s-Tour/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ada.jpeg">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AGC028C - Min Cost Cycle
+          Codeforces 860D - Wizard's Tour
         </h1>
 
         <div class="post-meta">
@@ -188,16 +188,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-02-23 12:53:15" itemprop="dateCreated datePublished" datetime="2021-02-23T12:53:15+08:00">2021-02-23</time>
+              <time title="Created: 2021-04-05 11:51:45 / Modified: 15:19:27" itemprop="dateCreated datePublished" datetime="2021-04-05T11:51:45+08:00">2021-04-05</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 13:46:44" itemprop="dateModified" datetime="2021-04-04T13:46:44+08:00">2021-04-04</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -219,15 +213,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/agc028/tasks/agc028_c" target="_blank" rel="noopener">AGC028C - Min Cost Cycle</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://codeforces.com/contest/860/problem/D" target="_blank" rel="noopener">Codeforces 860D - Wizard’s Tour</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>看题解做题法。</p>
-<p>这道题的关键在于放松一下限制，把$min$转化成求出一些较劣方案的最小值，最后会收缩到答案。之前遇见过<a href="https://codeforces.com/contest/1473/problem/E" target="_blank" rel="noopener">这个套路</a>，当时也想出来了，可能不是很会灵活运用。<br>问题本质上相当于从$2n$个$a$和$b$中选出$n$个数，并且合法。考虑什么情况下是合法的，如果全部选$a$或全部选$b$，很明显是合法的，然后如果存在某个$i$的$a_i$和$b_i$都存在，说明存在另一个$j$使得两个数都不存在，于是把其他存在一个的插到中间即可。<br>剩下的就是不存在这样的数，那么选一个使得存在即可。</p>
-<p>时间复杂度$O(nlogn)$，这个问题还是在于放缩使得问题得到最优解。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>$dfs$树构造题。看到这种图上构造就想到$dfs$树构造，但是最先开始没有想出来。<br>首先如果是一棵树，那么比较容易，从叶子向上缩即可，最后由于图的大小的奇偶性可能会剩下一条边。<br>考虑图怎么做，图相比树多了一些非树边，想办法处理非树边。如果非树边有偶数条，那么可以直接两两配对删除，问题转化为树的情况。如果有奇数条，那么还会剩下一条，直接把这条边和父边匹配即可，否则把父边传到上一个父节点和其他上传的树边以及非树边匹配。</p>
+<p>时间复杂度$O(N)$，是一个套路题。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">b</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a[i] &gt;&gt; b[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; c;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        c.emplace_back(a[i]);</span><br><span class="line">        c.emplace_back(b[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    sort(c.begin(), c.end());</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">sum</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        sum[i + <span class="number">1</span>] = sum[i] + c[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans = min(accumulate(a.begin(), a.end(), <span class="number">0L</span>L), accumulate(b.begin(), b.end(), <span class="number">0L</span>L));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="keyword">int</span> x = lower_bound(c.begin(), c.end(), a[i]) - c.begin();</span><br><span class="line">        <span class="keyword">int</span> y = lower_bound(c.begin(), c.end(), b[i]) - c.begin();</span><br><span class="line">        <span class="keyword">if</span> (x &gt; y) &#123;</span><br><span class="line">            swap(x, y);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (y &lt; n - <span class="number">1</span>) &#123;</span><br><span class="line">            ans = min(ans, sum[n]);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (x &lt; n - <span class="number">2</span>) &#123;</span><br><span class="line">            ans = min(ans, sum[n - <span class="number">1</span>] + c[y]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            ans = min(ans, sum[n - <span class="number">2</span>] + a[i] + b[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">  <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line">  <span class="keyword">int</span> N, M;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; M;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">adj</span><span class="params">(N)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; M; ++i) &#123;</span><br><span class="line">    <span class="keyword">int</span> X, Y;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; X &gt;&gt; Y;</span><br><span class="line">    X --;</span><br><span class="line">    Y --;</span><br><span class="line">    adj[X].push_back(Y);</span><br><span class="line">    adj[Y].push_back(X);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; <span class="title">vis</span><span class="params">(N)</span></span>;</span><br><span class="line">  <span class="built_in">vector</span>&lt;tuple&lt;<span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt; Ans;</span><br><span class="line">  <span class="built_in">map</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;, <span class="keyword">int</span>&gt; mp;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!vis[i]) &#123;</span><br><span class="line">      <span class="keyword">auto</span> dfs = [&amp;] (<span class="keyword">auto</span> &amp;&amp;f, <span class="keyword">int</span> X, <span class="keyword">int</span> Par) -&gt; <span class="keyword">int</span> &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; cities;</span><br><span class="line">        vis[X] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> Y : adj[X]) &#123;</span><br><span class="line">          <span class="keyword">if</span> (Y != Par) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!vis[Y]) &#123;</span><br><span class="line">              <span class="keyword">int</span> Z = f(f, Y, X);</span><br><span class="line">              <span class="keyword">if</span> (Z == <span class="number">-1</span>) &#123;</span><br><span class="line">                cities.push_back(Y);</span><br><span class="line">              &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                mp[minmax(Z, Y)] = <span class="literal">true</span>;</span><br><span class="line">                mp[minmax(Y, X)] = <span class="literal">true</span>;</span><br><span class="line">                Ans.emplace_back(Z, Y, X);</span><br><span class="line">              &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              <span class="keyword">if</span> (mp.find(minmax(X, Y)) == mp.end()) &#123;</span><br><span class="line">                cities.push_back(Y);</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (cities.size() &gt;= <span class="number">2</span>) &#123;</span><br><span class="line">          <span class="keyword">int</span> A = cities.back();</span><br><span class="line">          cities.pop_back();</span><br><span class="line">          <span class="keyword">int</span> B = cities.back();</span><br><span class="line">          cities.pop_back();</span><br><span class="line">          Ans.emplace_back(A, X, B);</span><br><span class="line">          mp[minmax(A, X)] = <span class="literal">true</span>;</span><br><span class="line">          mp[minmax(X, B)] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!cities.empty()) &#123;</span><br><span class="line">           <span class="keyword">return</span> cities[<span class="number">0</span>];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">      dfs(dfs, i, <span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; Ans.size() &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> [X, Y, Z] : Ans) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; X + <span class="number">1</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; Y + <span class="number">1</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; Z + <span class="number">1</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -237,7 +230,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Atcoder/" rel="tag"># Atcoder</a>
+              <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
           </div>
 
         
@@ -246,13 +239,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/02/21/%E6%9E%84%E9%80%A0%E9%A2%98%E6%80%BB%E7%BB%93/" rel="prev" title="构造题总结">
-      <i class="fa fa-chevron-left"></i> 构造题总结
+    <a href="/2021/04/05/SRM569div1-Medium-TheJediTest/" rel="prev" title="SRM569div1 Medium - TheJediTest">
+      <i class="fa fa-chevron-left"></i> SRM569div1 Medium - TheJediTest
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/02/25/ARC084D-Small-Multiple/" rel="next" title="ARC084D - Small Multiple">
-      ARC084D - Small Multiple <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
