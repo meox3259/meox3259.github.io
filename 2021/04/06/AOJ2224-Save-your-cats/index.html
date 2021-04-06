@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:SRM591div1 Medium - PyramidSequences">
+  <meta name="description" content="Link:AOJ2224 - Save your cats">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SRM591div1 Medium - PyramidSequences">
-<meta property="og:url" content="http://yoursite.com/2020/05/18/SRM591div1-Medium-PyramidSequences/index.html">
+<meta property="og:title" content="AOJ2224 - Save your cats">
+<meta property="og:url" content="http://yoursite.com/2021/04/06/AOJ2224-Save-your-cats/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:SRM591div1 Medium - PyramidSequences">
+<meta property="og:description" content="Link:AOJ2224 - Save your cats">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-18T00:50:25.000Z">
-<meta property="article:modified_time" content="2020-05-18T00:59:57.938Z">
+<meta property="article:published_time" content="2021-04-06T09:05:56.000Z">
+<meta property="article:modified_time" content="2021-04-06T09:07:47.263Z">
 <meta property="article:author" content="meox">
-<meta property="article:tag" content="Topcoder">
+<meta property="article:tag" content="AOJ">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/05/18/SRM591div1-Medium-PyramidSequences/">
+<link rel="canonical" href="http://yoursite.com/2021/04/06/AOJ2224-Save-your-cats/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>SRM591div1 Medium - PyramidSequences | meox</title>
+  <title>AOJ2224 - Save your cats | meox</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/18/SRM591div1-Medium-PyramidSequences/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/06/AOJ2224-Save-your-cats/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ada.jpeg">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          SRM591div1 Medium - PyramidSequences
+          AOJ2224 - Save your cats
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-05-18 08:50:25 / Modified: 08:59:57" itemprop="dateCreated datePublished" datetime="2020-05-18T08:50:25+08:00">2020-05-18</time>
+              <time title="Created: 2021-04-06 17:05:56 / Modified: 17:07:47" itemprop="dateCreated datePublished" datetime="2021-04-06T17:05:56+08:00">2021-04-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,16 +213,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://arena.topcoder.com/index.html#/u/practiceCode/15778/32526/12619/1/318812" target="_blank" rel="noopener">SRM591div1 Medium - PyramidSequences</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2224" target="_blank" rel="noopener">AOJ2224 - Save your cats</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>一个很巧妙的题。并没有想到这么数形结合。</p>
-<p>对于一个单独的数列，可以看作在一维数轴上来回反复，那么对于两个数列，则可以看成在一个二维平面上的一条折线。<br>一个从原点出发的点，每次碰上大小为$AB$的长方形的边界就会反弹，最终碰到角结束。画出来之后具体是<a href="https://www.cnblogs.com/cly-none/p/9479270.html" target="_blank" rel="noopener">这篇博客</a>里的样子。</p>
-<p>然后就是常见的置换分解计数，对于每个互质的小长方形分别统计，然后累加即可。</p>
-<p>时间复杂度$O(1)$。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>发现本质上是不能形成圈，那么也就是剩下的篱笆最多是一棵树，于是找出最大生成树用总和减去即可。</p>
+<p>时间复杂度$O(MlogM)$。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PyramidSequences</span> &#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">distinctPairs</span><span class="params">(<span class="keyword">int</span> N, <span class="keyword">int</span> M)</span> </span>&#123;</span><br><span class="line">		--N; --M;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> d = __gcd(N, M);</span><br><span class="line">		N /= d; M /= d;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">0</span>;</span><br><span class="line">		ans = ans + <span class="number">1L</span>L * (N + <span class="number">1</span>) * (M + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">		ans = ans + <span class="number">1L</span>L * N * M * (d - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">dsu</span> &#123;</span></span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; dat;</span><br><span class="line">  <span class="keyword">int</span> components_;</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  dsu() &#123;&#125;</span><br><span class="line">  explicit dsu(int n) : dat(n, -1), components_(n) &#123;&#125;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> dat.size();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">root</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    assert(<span class="number">0</span> &lt;= x), assert(x &lt; size());</span><br><span class="line">    <span class="keyword">return</span> dat[x] &lt; <span class="number">0</span> ? x : dat[x] = root(dat[x]);</span><br><span class="line">  &#125;</span><br><span class="line">  pair&lt;int, int&gt; unite(int x, int y) &#123;</span><br><span class="line">    assert(<span class="number">0</span> &lt;= x), assert(x &lt; size());</span><br><span class="line">    assert(<span class="number">0</span> &lt;= y), assert(y &lt; size());</span><br><span class="line">    x = root(x), y = root(y);</span><br><span class="line">    <span class="keyword">if</span> (x == y) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123; x, <span class="number">-1</span> &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    components_ --;</span><br><span class="line">    <span class="keyword">if</span> (-dat[x] &lt; -dat[y]) &#123;</span><br><span class="line">      swap(x, y);</span><br><span class="line">    &#125;</span><br><span class="line">    dat[x] += dat[y];</span><br><span class="line">    dat[y] = x;</span><br><span class="line">    <span class="keyword">return</span> &#123; x, y &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">bool</span> <span class="title">same</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    assert(<span class="number">0</span> &lt;= x), assert(x &lt; size());</span><br><span class="line">    assert(<span class="number">0</span> &lt;= y), assert(y &lt; size());</span><br><span class="line">    <span class="keyword">return</span> root(x) == root(y);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    assert(<span class="number">0</span> &lt;= x), assert(x &lt; size());</span><br><span class="line">    <span class="keyword">return</span> -dat[root(x)];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">components</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> components_;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">  <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line">  <span class="keyword">int</span> N, M;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; M;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt; <span class="title">X</span><span class="params">(N)</span></span>;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt; <span class="title">Y</span><span class="params">(N)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; X[i] &gt;&gt; Y[i];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">P</span><span class="params">(M)</span></span>;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">Q</span><span class="params">(M)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; M; ++i) &#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; P[i] &gt;&gt; Q[i];</span><br><span class="line">    P[i] --;</span><br><span class="line">    Q[i] --;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">double</span> Ans = <span class="number">0.</span>;</span><br><span class="line">  <span class="keyword">auto</span> dis = [&amp;] (<span class="keyword">int</span> i, <span class="keyword">int</span> j) -&gt; <span class="keyword">double</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sqrt</span>((X[i] - X[j]) * (X[i] - X[j]) + (Y[i] - Y[j]) * (Y[i] - Y[j]));</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="function">dsu <span class="title">dsu</span><span class="params">(N)</span></span>;</span><br><span class="line">  <span class="built_in">vector</span>&lt;tuple&lt;<span class="keyword">double</span>, <span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt; E;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; M; ++i) &#123;</span><br><span class="line">    E.emplace_back(dis(P[i], Q[i]), P[i], Q[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  sort(E.begin(), E.end());</span><br><span class="line">  reverse(E.begin(), E.end());</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> [D, X, Y] : E) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!dsu.same(X, Y)) &#123;</span><br><span class="line">      dsu.unite(X, Y);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      Ans += D;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; fixed &lt;&lt; setprecision(<span class="number">10</span>);</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; Ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -232,7 +230,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Topcoder/" rel="tag"># Topcoder</a>
+              <a href="/tags/AOJ/" rel="tag"># AOJ</a>
           </div>
 
         
@@ -241,13 +239,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/05/13/SRM592div1-Easy-LittleElephantAndBalls/" rel="prev" title="SRM592div1 Easy - LittleElephantAndBalls">
-      <i class="fa fa-chevron-left"></i> SRM592div1 Easy - LittleElephantAndBalls
+    <a href="/2021/04/06/Codeforces-1503C-Travelling-Salesman-Problem/" rel="prev" title="Codeforces 1503C - Travelling Salesman Problem">
+      <i class="fa fa-chevron-left"></i> Codeforces 1503C - Travelling Salesman Problem
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/05/19/SRM590div1-Medium-XorCards/" rel="next" title="SRM590div1 Medium - XorCards">
-      SRM590div1 Medium - XorCards <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
