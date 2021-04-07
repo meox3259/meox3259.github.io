@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Link:AGC034C - Tests">
+  <meta name="description" content="Link:AOJ2333 - My friends are small">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AGC034C - Tests">
-<meta property="og:url" content="http://yoursite.com/2020/06/28/AGC034C-Tests/index.html">
+<meta property="og:title" content="AOJ2333 - My friends are small">
+<meta property="og:url" content="http://yoursite.com/2021/04/07/AOJ2333-My-friends-are-small/index.html">
 <meta property="og:site_name" content="meox">
-<meta property="og:description" content="Link:AGC034C - Tests">
+<meta property="og:description" content="Link:AOJ2333 - My friends are small">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-28T11:21:57.000Z">
-<meta property="article:modified_time" content="2020-06-28T11:25:22.797Z">
+<meta property="article:published_time" content="2021-04-07T07:10:02.000Z">
+<meta property="article:modified_time" content="2021-04-07T07:14:17.750Z">
 <meta property="article:author" content="meox">
-<meta property="article:tag" content="Atcoder">
+<meta property="article:tag" content="AOJ">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/28/AGC034C-Tests/">
+<link rel="canonical" href="http://yoursite.com/2021/04/07/AOJ2333-My-friends-are-small/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>AGC034C - Tests | meox</title>
+  <title>AOJ2333 - My friends are small | meox</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/AGC034C-Tests/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/07/AOJ2333-My-friends-are-small/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ada.jpeg">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AGC034C - Tests
+          AOJ2333 - My friends are small
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-06-28 19:21:57 / Modified: 19:25:22" itemprop="dateCreated datePublished" datetime="2020-06-28T19:21:57+08:00">2020-06-28</time>
+              <time title="Created: 2021-04-07 15:10:02 / Modified: 15:14:17" itemprop="dateCreated datePublished" datetime="2021-04-07T15:10:02+08:00">2021-04-07</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,15 +213,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://atcoder.jp/contests/agc034/tasks/agc034_c" target="_blank" rel="noopener">AGC034C - Tests</a></p>
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2333&lang=jp" target="_blank" rel="noopener">AOJ2333 - My friends are small</a></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>一般。</p>
-<p>问题在于这个分段不好处理。<br>仔细思考一下，最后选的能够得分的考试肯定是一个没满的和几个考满的，可以把分数看成一个分段函数，分成两段。<br>那么枚举一下这个不满的函数，然后二分选几个满的，这里满足二分性，再二分这门课该考几分，更新答案即可。</p>
-<p>时间复杂度$O(nlogn)$。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>简单的$dp$。要求背包满到不能选额外的物品，那么枚举剩余的空间，小于等于剩余的空间的物品都要选进去，发现这是一段连续的区间，于是把物品按照体积从大到小排序，枚举剩余的体积为$W$，体积小于等于$W$的物品的体积和是$S$，那么对应的方案是某个前缀的$dp$值。</p>
+<p>时间复杂度$O(NW)$。</p>
 <hr>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> n, x;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; x;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">b</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">l</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">u</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; b[i] &gt;&gt; l[i] &gt;&gt; u[i];</span><br><span class="line">		sum += b[i] * l[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">auto</span> calc = [&amp;] (<span class="keyword">int</span> i) &#123;</span><br><span class="line">		<span class="keyword">return</span> b[i] * l[i] + (x - b[i]) * u[i];</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">id</span><span class="params">(n)</span></span>;</span><br><span class="line">	iota(id.begin(), id.end(), <span class="number">0</span>);</span><br><span class="line">	sort(id.begin(), id.end(), [&amp;] (<span class="keyword">int</span> i, <span class="keyword">int</span> j) &#123;</span><br><span class="line">		<span class="keyword">return</span> calc(i) &gt; calc(j);</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">pre</span><span class="params">(n)</span></span>;</span><br><span class="line">	pre[<span class="number">0</span>] = calc(id[<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i + <span class="number">1</span> &lt; n; ++i) &#123;</span><br><span class="line">		pre[i + <span class="number">1</span>] = pre[i] + calc(id[i + <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">1L</span>L * n * x;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> j = id[i];</span><br><span class="line">		<span class="keyword">int</span> left = <span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">int</span> right = n;</span><br><span class="line">		<span class="keyword">int</span> cur = n;</span><br><span class="line">		<span class="keyword">while</span>(right - left &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> mid = left + right &gt;&gt; <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">int</span> p = mid - <span class="number">1</span> + (mid &gt;= i + <span class="number">1</span>);</span><br><span class="line">			<span class="keyword">if</span>((p &gt;= <span class="number">0</span> ? pre[p] : <span class="number">0</span>) + (mid - <span class="number">1</span> &lt; i ? calc(j) : <span class="number">0</span>) &gt;= sum) &#123;</span><br><span class="line">				right = cur = mid;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				left = mid;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		left = <span class="number">-1</span>;</span><br><span class="line">		right = x + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> pos = x;</span><br><span class="line">		<span class="keyword">while</span>(right - left &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> mid = left + right &gt;&gt; <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">long</span> <span class="keyword">long</span> add = l[j] * min(<span class="number">1L</span>L * mid, b[j]) + u[j] * max(<span class="number">0L</span>L, mid - b[j]);</span><br><span class="line">			<span class="keyword">int</span> p = cur &gt;= i + <span class="number">1</span> ? cur : cur - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(add + (p &gt;= <span class="number">0</span> ? pre[p] : <span class="number">0</span>) - (cur &gt;= i + <span class="number">1</span> ? calc(j) : <span class="number">0</span>) &gt;= sum) &#123;</span><br><span class="line">				right = pos = mid;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				left = mid;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		ans = min(ans, <span class="number">1L</span>L * cur * x + pos);</span><br><span class="line">	&#125;	</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> P = <span class="number">1'000'000'007</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">  <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line">  <span class="keyword">int</span> N, W;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; W;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">w</span><span class="params">(N)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; w[i];</span><br><span class="line">  &#125;</span><br><span class="line">  sort(w.begin(), w.end(), greater&lt;<span class="keyword">int</span>&gt; ());</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">dp</span><span class="params">(N + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; (W + <span class="number">1</span>))</span></span>;</span><br><span class="line">  dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= W; ++j) &#123;</span><br><span class="line">      dp[i + <span class="number">1</span>][j] += dp[i][j];</span><br><span class="line">      dp[i + <span class="number">1</span>][j] %= P;</span><br><span class="line">      <span class="keyword">if</span> (j + w[i] &lt;= W) &#123;</span><br><span class="line">        dp[i + <span class="number">1</span>][j + w[i]] += dp[i][j];</span><br><span class="line">        dp[i + <span class="number">1</span>][j + w[i]] %= P;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> Ans = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= W; ++i) &#123;</span><br><span class="line">    <span class="keyword">int</span> d = W - i;</span><br><span class="line">    <span class="keyword">int</span> j = N - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> S = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; w[j] &lt;= d) &#123;</span><br><span class="line">      S += w[j];</span><br><span class="line">      j --; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (S &lt;= i) &#123;</span><br><span class="line">      Ans += dp[j + <span class="number">1</span>][i - S];</span><br><span class="line">      Ans %= P;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; Ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -231,7 +230,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Atcoder/" rel="tag"># Atcoder</a>
+              <a href="/tags/AOJ/" rel="tag"># AOJ</a>
           </div>
 
         
@@ -240,13 +239,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/27/ABC172F-Unfair-Nim/" rel="prev" title="ABC172F - Unfair Nim">
-      <i class="fa fa-chevron-left"></i> ABC172F - Unfair Nim
+    <a href="/2021/04/07/AOJ2642-Dinner/" rel="prev" title="AOJ2642 - Dinner">
+      <i class="fa fa-chevron-left"></i> AOJ2642 - Dinner
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/28/AGC033C-Removing-Coins/" rel="next" title="AGC033C - Removing Coins">
-      AGC033C - Removing Coins <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
