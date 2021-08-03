@@ -28,7 +28,7 @@
 <meta property="og:description" content="Link:Codeforces 1554E - You">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-31T09:47:24.000Z">
-<meta property="article:modified_time" content="2021-07-31T10:13:46.201Z">
+<meta property="article:modified_time" content="2021-08-03T00:55:01.927Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
@@ -188,10 +188,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-07-31 17:47:24 / Modified: 18:13:46" itemprop="dateCreated datePublished" datetime="2021-07-31T17:47:24+08:00">2021-07-31</time>
+              <time title="Created: 2021-07-31 17:47:24" itemprop="dateCreated datePublished" datetime="2021-07-31T17:47:24+08:00">2021-07-31</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-03 08:55:01" itemprop="dateModified" datetime="2021-08-03T08:55:01+08:00">2021-08-03</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -217,7 +223,7 @@
 <a id="more"></a>
 
 <hr>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>功亏一篑输在了简单的数学上。首先发现问题的难点在于$gcd$上。分析一下可以发现只有当$K$为$N-1$的因子时才可能有解，所以只用枚举$\sqrt{N}$个$K$，那么可以线性地求每个$K$的方案数。再仔细思考一下，发现除了$K=1$是特殊的外，其他的$K$对应的合法序列最多只有1种。考虑将度数$\geq K$的点拿出来构成一棵树然后从叶子开始考虑，发现删的方案是定的，这里可以一遍$dfs$解决，最后容斥统计即可。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>功亏一篑输在了简单的数学上。首先发现问题的难点在于$gcd$上。分析一下可以发现只有当$K$为$N-1$的因子时才可能有解，所以只用枚举$\sqrt{N}$个$K$，那么可以线性地求每个$K$的方案数。再仔细思考一下，发现除了$K=1$是特殊的外，其他的$K$对应的合法序列最多只有$1$种。考虑将度数$\geq K$的点拿出来构成一棵树然后从叶子开始考虑，发现删的方案是定的，这里可以一遍$dfs$解决，最后容斥统计即可。</p>
 <p>然而问题在于$K=1$的方案怎么求，这里偷懒了没有思考出来。其实仔细想一下，删点造成的贡献其实等价于每条边造成的贡献，也就是每条边可以选择加到左边或右边，这样可以发现方案数为$2^{N-1}$，那么所有的方案数容斥一下即可。</p>
 <p>时间复杂度$O(N\sqrt{N}+NlogN)$。</p>
 <hr>
