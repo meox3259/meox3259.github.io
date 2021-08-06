@@ -28,7 +28,7 @@
 <meta property="og:description" content="Link:Codeforces 1548C - The Three Little Pigs">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-03T03:42:20.000Z">
-<meta property="article:modified_time" content="2021-08-06T01:09:09.362Z">
+<meta property="article:modified_time" content="2021-08-06T06:11:23.492Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
@@ -196,7 +196,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-08-06 09:09:09" itemprop="dateModified" datetime="2021-08-06T09:09:09+08:00">2021-08-06</time>
+                <time title="Modified: 2021-08-06 14:11:23" itemprop="dateModified" datetime="2021-08-06T14:11:23+08:00">2021-08-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,7 +224,7 @@
 
 <hr>
 <h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>失之毫厘，不自信以及时间不够错失了这个题。</p>
-<p>首先有一个等式<br>$$\sum_{X=0}^{N}\comb{X}{M}=\comb{N+1}{M+1}$$<br>但是这里由于$X$必须是$3$的倍数所以不能直接用。但是可以自然地联系到$dp$上，通过$dp$计算组合数。</p>
+<p>首先有一个等式<br>$$\sum_{X=0}^{N}\tbinom{X}{M}=\tbinom{N+1}{M+1}$$<br>但是这里由于$X$必须是$3$的倍数所以不能直接用。但是可以自然地联系到$dp$上，通过$dp$计算组合数。</p>
 <p>考虑$dp[x][0/1/2]$，表示余数为$0/1/2$隔着$3$的和，然后可以找到相邻的递推式，可以发现可以通过这些式子得到递推关系。</p>
 <p>时间复杂度$O(3N)$。</p>
 <hr>
