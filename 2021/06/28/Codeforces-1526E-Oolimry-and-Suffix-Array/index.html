@@ -28,7 +28,7 @@
 <meta property="og:description" content="Link:Codeforces 1526E - Oolimry and Suffix Array">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-27T17:00:56.000Z">
-<meta property="article:modified_time" content="2021-08-12T12:30:07.119Z">
+<meta property="article:modified_time" content="2021-08-12T13:00:51.424Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
@@ -196,7 +196,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-08-12 20:30:07" itemprop="dateModified" datetime="2021-08-12T20:30:07+08:00">2021-08-12</time>
+                <time title="Modified: 2021-08-12 21:00:51" itemprop="dateModified" datetime="2021-08-12T21:00:51+08:00">2021-08-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -227,7 +227,7 @@
 <p>考虑一个正确的思考方式与解法，本质上后缀数组$sa$叙述了串中$n$个字符的大小关系。先由$sa$数组求出$rnk$数组，$rnk_i$表示$s[i:]$在所有后缀中的排名为$rnk_i$。那么由$rnk_i &lt; rnk_j$表示$s[i:] &lt; s[j:]$，可以推出$s_i \leq s_j$。</p>
 <p>在这里只对$sa_i与sa_{i+1}$考虑，因为相邻的$n-1$个大小关系可以将所有$n$个字符串成了一串，由不等式的传递关系则可以确定任意两个字符之间的大小关系。所以我们关心的问题变成了长度为$n-1$的不等式链中哪些位置可以取到等号。</p>
 <p>考虑后缀比较的过程，如果$rnk_{i+1}i &lt; rnk_{j+1}$，那么说明$s[i+1:] &lt; s[j+1:]$，则可以使得$s_i = s_j$。从反面思考，如果$rnk_i &lt; rnk_j$且$rnk_{i+1} &gt; rnk_{j+1}$，那么说明$s_i &lt; s_j$是必须取到的。由$s_i &lt; s_j$，那么前面对应的位置则可以取等。</p>
-<p>由上面的结论，回到对于后缀数组给出的不等式链的处理上。考虑$s_{sa_i}$与$s_{sa_{i+1}}$是否能取到等号，那么判断$rnk_{sa_i+1}和$rnk_{sa_{i+1}+1}$即可。其实在这里进行了一个思考，为什么判定了$sa$中相邻是大于号则对于其他比较的大于号能取到，这里的一个思考是$sa$中对于字符的比较顺序是最「紧密」的，所以能表达出其他位置的大小关系。</p>
+<p>由上面的结论，回到对于后缀数组给出的不等式链的处理上。考虑$s_{sa_i}$与$s_{sa_{i+1}}$是否能取到等号，那么判断$rnk_{sa_i+1}$和$rnk_{sa_{i+1}+1}$即可。其实在这里进行了一个思考，为什么判定了$sa$中相邻是大于号则对于其他比较的大于号能取到，这里的一个思考是$sa$中对于字符的比较顺序是最「紧密」的，所以能表达出其他位置的大小关系。</p>
 <p>最后对于方案的计算，等号意味着等号两端的字符相同，那么哪些位置不是等号意味着不等号两端是不同的字符。于是设共有$L$个等号，然后枚举有多少个等号:<br>$$\sum_{i=0}^{L}{\binom{L}{i}\binom{N-i}{k}}=\binom{N}{L+K}$$</p>
 <p>时间复杂度$O(N+K)$。</p>
 <p>本质上这个题目利用了不等号的性质，即可以用$n-1$个不等号表示出所有两个字符之间的大小关系。同时由于后缀数组特殊的性质使得排序后的后缀具有这个不等的关系的性质。</p>
