@@ -28,7 +28,7 @@
 <meta property="og:description" content="Link:Codeforces 1516E - Baby Ehab Plays with Permutations">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-18T12:43:24.000Z">
-<meta property="article:modified_time" content="2021-08-18T23:34:34.434Z">
+<meta property="article:modified_time" content="2021-08-19T00:20:42.134Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
@@ -196,7 +196,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-08-19 07:34:34" itemprop="dateModified" datetime="2021-08-19T07:34:34+08:00">2021-08-19</time>
+                <time title="Modified: 2021-08-19 08:20:42" itemprop="dateModified" datetime="2021-08-19T08:20:42+08:00">2021-08-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -226,7 +226,7 @@
 <h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>首先需要考虑一个问题是通过交换能获得哪些序列。考虑一个简单的想法，依次对于$1$到$n$每个位置$i$，有两种选择。一种是与之前的$i-1$个数中的某个数交换，另一种是不交换。可以发现这样交换能够形成所有合法的序列。</p>
 <p>从另一种角度来理解交换，对于使一个排列变得有序的最小交换次数为$n-$环的个数。那么等价于序列中有$n-k$个环，也就是相当于选择$k$个元素并加入到其他的环中。其实这里关于序列的定义等价于第一类斯特林数，这个题也可以通过第一类斯特林数的恒等式去做。</p>
 <p>回到第一种理解，考虑设计一个$dp$。$dp[i][j]$表示前$i$个位置共交换了$k$次。转移为$dp[i][j]=dp[i-1][j]+(i-1)dp[i-1][j-1]$。那么答案为$\sum_{j=1,(j-k)mod2=0}^{k}{dp[n][j]}$。但是问题在于$n$太大了，时间空间复杂度接受不了。</p>
-<p>考虑这个问题的特殊性，$k$的值比较小。考虑到交换$k$次最多会影响到$2k$个位置，那么不妨考虑选出被影响到的位置再进行$dp$。设$f[i][j]$表示「至多」$i$个位置交换了$j$次的方案数，转移同上，$f[i][j]=f[i-1][j]+f[i-1]<a href="i-1">j-1</a>$。虽然可以快速计算出这个$dp$，但是没办法直接利用组合数去统计，对于$\binom{n}{i}f[i][j]$，直接累加会存在重复的情况。因为某些点不动的话会在多个$dp$值中出现。</p>
+<p>考虑这个问题的特殊性，$k$的值比较小。考虑到交换$k$次最多会影响到$2k$个位置，那么不妨考虑选出被影响到的位置再进行$dp$。设$f[i][j]$表示「至多」$i$个位置交换了$j$次的方案数，转移同上，$f[i][j]=f[i-1][j]+(i-1)f[i-1][j-1]$。虽然可以快速计算出这个$dp$，但是没办法直接利用组合数去统计，对于$\binom{n}{i}f[i][j]$，直接累加会存在重复的情况。因为某些点不动的话会在多个$dp$值中出现。</p>
 <p>对于处理重复，考虑利用容斥原理。设$g[i][j]$表示「恰好」影响了$i$个位置并交换了$j$次的方案数。转移为$g[i][j]=\sum_{k=0}^{i}{(-1)^{i-k}f[k][j]\binom{i}{k}}$，也可以通过「二项式反演」推出。</p>
 <p>最后可以推出答案为<br>$$\sum_{i=1}^{min(n,2m)}{\sum_{j=0,(j-k)mod2=0}^{j=k}{g[i][j]\binom{n}{i}}}$$<br>因为两次交换可以抵消。</p>
 <p>时间复杂度$O(k^3)$。</p>
