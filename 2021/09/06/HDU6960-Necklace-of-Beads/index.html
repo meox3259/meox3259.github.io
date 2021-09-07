@@ -28,7 +28,7 @@
 <meta property="og:description" content="Link:HDU6960 - Necklace of Beads">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-06T07:36:17.000Z">
-<meta property="article:modified_time" content="2021-09-06T07:56:51.276Z">
+<meta property="article:modified_time" content="2021-09-07T00:38:59.362Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="XCPC">
 <meta name="twitter:card" content="summary">
@@ -188,10 +188,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-09-06 15:36:17 / Modified: 15:56:51" itemprop="dateCreated datePublished" datetime="2021-09-06T15:36:17+08:00">2021-09-06</time>
+              <time title="Created: 2021-09-06 15:36:17" itemprop="dateCreated datePublished" datetime="2021-09-06T15:36:17+08:00">2021-09-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-09-07 08:38:59" itemprop="dateModified" datetime="2021-09-07T08:38:59+08:00">2021-09-07</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -218,9 +224,9 @@
 
 <hr>
 <h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>这个题的难点在于存在旋转，于是需要考虑同构。</p>
-<p>考虑$burnside$定理，即<br>$$|X/G|=\frac{1}{|G|}\sum_{g \in G}{|X^g|}$$<br>其中<br>$$X^g={x|x \in X, g(x)=x}$$<br>意思是对于每个置换计算在这个置换下不变的染色的环，最后求和取平均值即是答案。</p>
+<p>考虑$burnside$定理，即<br>$$|X/G|=\frac{1}{|G|}\sum_{g \in G}{|X^g|}$$<br>其中<br>$$X^g=\left{\begin{matrix} x|x \in X, g(x)=x \end{matrix}\right}$$<br>意思是对于每个置换计算在这个置换下不变的染色的环，最后求和取平均值即是答案。</p>
 <p>那么设当前旋转$i$步，环会被分成$gcd(i,n)$个分离的环，那么每个环的内部需要是一样的颜色。本质上相当于求对于一个长度为$gcd(i,n)$的环染色的方案数。</p>
-<p>先考虑在不考虑同构的情况下计算一个环的染色方案数。设$f(n,m)$表示长度为$n$的环染$m$个绿色，那么<br>$$f(n,m)=2^m \ast (\tbinom(n-m,m)+\tbinom(n-m-1,m-1))$$</p>
+<p>先考虑在不考虑同构的情况下计算一个环的染色方案数。设$f(n,m)$表示长度为$n$的环染$m$个绿色，那么<br>$$f(n,m)=2^m \ast (\tbinom{n-m}{m}+\tbinom{n-m-1}{m-1})$$</p>
 <p>然后考虑计算答案，最后可以化简为<br>$$\frac{1}{n}\sum_{d|n}{\phi(\lceil \frac{n}{d} \rceil)}F(d)$$<br>其中<br>$$F(d)=\sum_{i=0}^{\lceil \frac{k \ast d}{n} \rceil}{f(d,i)}$$</p>
 <p>时间复杂度$O(k)$。</p>
 <hr>
@@ -246,7 +252,10 @@
     <a href="/2021/09/03/ABC137F-Polynomial-Construction/" rel="prev" title="ABC137F - Polynomial Construction">
       <i class="fa fa-chevron-left"></i> ABC137F - Polynomial Construction
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/07/%E3%80%8CHNOI2016%E3%80%8D%E5%BA%8F%E5%88%97/" rel="next" title="「HNOI2016」序列">
+      「HNOI2016」序列 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -322,7 +331,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">235</span>
+          <span class="site-state-item-count">236</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
