@@ -28,7 +28,7 @@
 <meta property="og:description" content="Link:Codeforces 1562E - Rescue Niwen!">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-14T07:34:44.000Z">
-<meta property="article:modified_time" content="2021-09-14T07:53:59.146Z">
+<meta property="article:modified_time" content="2021-09-27T15:54:55.977Z">
 <meta property="article:author" content="meox">
 <meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
@@ -188,10 +188,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-09-14 15:34:44 / Modified: 15:53:59" itemprop="dateCreated datePublished" datetime="2021-09-14T15:34:44+08:00">2021-09-14</time>
+              <time title="Created: 2021-09-14 15:34:44" itemprop="dateCreated datePublished" datetime="2021-09-14T15:34:44+08:00">2021-09-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-09-27 23:54:55" itemprop="dateModified" datetime="2021-09-27T23:54:55+08:00">2021-09-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -225,6 +231,7 @@
 <li>2.$b-a+1 &lt; d-c+1$。如果$s_{b+1}&lt;s_{c+b-a+1}$，那么可以取$[a,b+1]$直到不能取。否则可以直接不取$[a,b]$，取$[c,d]$的一个前缀即可。</li>
 </ul>
 <p>$dp$转移方程为<br>$$dp_i=\max_{j=1}^{i-1}{dp_j+n-(i+lcp_{i,j}-1)}$$</p>
+<p>另一种理解为，设$dp_i$表示当前最后一个选中的串的开头是$i$，可以发现从$[i,i]$到$[i,n]$都会被选中。考虑新加入的串开头为$j$，<br>那么对于$[j,j]$到$[j,n]$都要被选中。但是对于$lcp(i,j)$的部分是相同的，在之前被选过了，所以需要删掉这一部分。</p>
 <p>时间复杂度$O(n^2)$。</p>
 <hr>
 <h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> t;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">  <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">lcp</span><span class="params">(n, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; (n))</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j = n - <span class="number">1</span>; j &gt;= <span class="number">0</span>; --j) &#123;</span><br><span class="line">        lcp[i][j] = (s[i] == s[j] ? ((i &lt; n - <span class="number">1</span> &amp;&amp; j &lt; n - <span class="number">1</span>) ? lcp[i + <span class="number">1</span>][j + <span class="number">1</span>] : <span class="number">0</span>) + <span class="number">1</span> : <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">      dp[i] = n - i;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; ++j) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i + lcp[i][j] &lt; n &amp;&amp; s[j + lcp[i][j]] &lt; s[i + lcp[i][j]]) &#123;</span><br><span class="line">          dp[i] = max(dp[i], dp[j] + (n - lcp[j][i] - i)); </span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *max_element(dp.begin(), dp.end()) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
