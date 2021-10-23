@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/nicolun.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/nicolun-32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/nicolun-16.ico">
+  <link rel="mask-icon" href="/images/nicolun.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Link:Codeforces 1416D - Graph and Queries">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces 1416D - Graph and Queries">
+<meta property="og:url" content="http://yoursite.com/2021/10/23/Codeforces-1416D-Graph-and-Queries/index.html">
+<meta property="og:site_name" content="meox">
+<meta property="og:description" content="Link:Codeforces 1416D - Graph and Queries">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-23T11:45:16.000Z">
+<meta property="article:modified_time" content="2021-10-23T11:56:08.304Z">
+<meta property="article:author" content="meox">
+<meta property="article:tag" content="Codeforces">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2021/10/23/Codeforces-1416D-Graph-and-Queries/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>Codeforces 1416D - Graph and Queries | meox</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">meox</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">「勝算なんてなくたって構わない 辿り着きたい場所があるから」</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tag"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-tranings">
+
+    <a href="/tranings/" rel="section"><i class="fa fa-fw fa-archive"></i>tranings</a>
+
+  </li>
+        <li class="menu-item menu-item-templates">
+
+    <a href="/templates/" rel="section"><i class="fa fa-fw fa-archive"></i>templates</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/23/Codeforces-1416D-Graph-and-Queries/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/nicolun_1.jpg">
+      <meta itemprop="name" content="meox">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="meox">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Codeforces 1416D - Graph and Queries
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-10-23 19:45:16 / Modified: 19:56:08" itemprop="dateCreated datePublished" datetime="2021-10-23T19:45:16+08:00">2021-10-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Competitive-Programming/" itemprop="url" rel="index"><span itemprop="name">Competitive Programming</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><p><a href="https://codeforces.com/contest/1416/problem/D" target="_blank" rel="noopener">Codeforces 1416D - Graph and Queries</a></p>
+<a id="more"></a>
+
+<hr>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h1><p>考虑离线的话，可以发现第一个操作不是很好进行。</p>
+<p>考虑一个类似克鲁斯卡尔重构树的操作，对加边的时间进行建树，保证随着深度的递减连的边时间越早。建完树后，考虑查询。对于一个询问，只需要倍增到能达到的最上面的点，然后查询整个子树最大的点权并删除即可。</p>
+<p>时间复杂度$O(nlogn)$。</p>
+<hr>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sgt</span> &#123;</span></span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; mx;</span><br><span class="line">  sgt() &#123;&#125;</span><br><span class="line">  sgt(<span class="keyword">int</span> n) : mx(n * <span class="number">4</span> + <span class="number">5</span>, <span class="number">-1</span>) &#123;&#125;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> x, <span class="keyword">int</span> p, <span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r) &#123;</span><br><span class="line">      mx[x] = v;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (p &lt;= mid) &#123;</span><br><span class="line">      update(l, mid, x &lt;&lt; <span class="number">1</span>, p, v);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      update(mid + <span class="number">1</span>, r, x &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, p, v);</span><br><span class="line">    &#125;</span><br><span class="line">    mx[x] = max(mx[x &lt;&lt; <span class="number">1</span>], mx[x &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> x, <span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &gt; b || r &lt; a) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (l &gt;= a &amp;&amp; r &lt;= b) &#123;</span><br><span class="line">      <span class="keyword">return</span> mx[x];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> max(query(l, mid, x &lt;&lt; <span class="number">1</span>, a, b), query(mid + <span class="number">1</span>, r, x &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, a, b));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">  <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line">  <span class="keyword">int</span> n, m, q;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">p</span><span class="params">(n)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; p[i];</span><br><span class="line">    p[i]--;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt; e;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">    <span class="keyword">int</span> x, y;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y;</span><br><span class="line">    x--;</span><br><span class="line">    y--;</span><br><span class="line">    e.emplace_back(x, y);</span><br><span class="line">  &#125;</span><br><span class="line">  vector&lt;pair&lt;int, int&gt;&gt; ask(q);</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; <span class="title">vis</span><span class="params">(m)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; q; ++i) &#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; ask[i].first &gt;&gt; ask[i].second;</span><br><span class="line">    ask[i].second--;</span><br><span class="line">    <span class="keyword">if</span> (ask[i].first == <span class="number">2</span>) &#123;</span><br><span class="line">      vis[ask[i].second] = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">par</span><span class="params">(n + m + q)</span></span>;</span><br><span class="line">  iota(par.begin(), par.end(), <span class="number">0</span>);</span><br><span class="line">  <span class="keyword">auto</span> find = [&amp;] (<span class="keyword">auto</span> &amp;&amp;find, <span class="keyword">int</span> x) -&gt; <span class="keyword">int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> x == par[x] ? x : par[x] = find(find, par[x]);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">t</span><span class="params">(n + m + q)</span></span>;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">adj</span><span class="params">(n + m + q)</span></span>;</span><br><span class="line">  <span class="keyword">int</span> tot = n;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!vis[i]) &#123;</span><br><span class="line">      <span class="keyword">int</span> x = find(find, e[i].first);</span><br><span class="line">      <span class="keyword">int</span> y = find(find, e[i].second);</span><br><span class="line">      <span class="keyword">if</span> (x != y) &#123;</span><br><span class="line">        t[tot] = q;</span><br><span class="line">        adj[tot].push_back(x);</span><br><span class="line">        adj[tot].push_back(y);</span><br><span class="line">        par[x] = tot;</span><br><span class="line">        par[y] = tot;</span><br><span class="line">        tot++;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = q - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (ask[i].first == <span class="number">2</span>) &#123;</span><br><span class="line">      <span class="keyword">int</span> x = find(find, e[ask[i].second].first);</span><br><span class="line">      <span class="keyword">int</span> y = find(find, e[ask[i].second].second);</span><br><span class="line">      <span class="keyword">if</span> (x != y) &#123;</span><br><span class="line">        par[x] = tot;</span><br><span class="line">        par[y] = tot;</span><br><span class="line">        t[tot] = i;</span><br><span class="line">        adj[tot].push_back(x);</span><br><span class="line">        adj[tot].push_back(y);</span><br><span class="line">        tot++;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">dfn</span><span class="params">(tot, <span class="number">-1</span>)</span></span>;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">out</span><span class="params">(tot, <span class="number">-1</span>)</span></span>;</span><br><span class="line">  <span class="keyword">int</span> dfc = <span class="number">0</span>;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">jump</span><span class="params">(tot, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; (<span class="number">21</span>, <span class="number">-1</span>))</span></span>;</span><br><span class="line">  <span class="keyword">auto</span> dfs = [&amp;] (<span class="keyword">auto</span> &amp;&amp;dfs, <span class="keyword">int</span> x) -&gt; <span class="keyword">void</span> &#123;</span><br><span class="line">    dfn[x] = dfc++;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> y : adj[x]) &#123;</span><br><span class="line">      jump[y][<span class="number">0</span>] = x;</span><br><span class="line">      dfs(dfs, y);</span><br><span class="line">    &#125;</span><br><span class="line">    out[x] = dfc;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tot; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (par[i] == i) &#123;</span><br><span class="line">      dfs(dfs, i);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function">sgt <span class="title">sgt</span><span class="params">(tot)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    sgt.update(<span class="number">0</span>, tot - <span class="number">1</span>, <span class="number">1</span>, dfn[i], p[i]); </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">20</span>; ++j) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tot; ++i) &#123;</span><br><span class="line">      <span class="keyword">if</span> (jump[i][j] != <span class="number">-1</span>) &#123;</span><br><span class="line">        jump[i][j + <span class="number">1</span>] = jump[jump[i][j]][j];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">id</span><span class="params">(n)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    id[p[i]] = i;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; q; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (ask[i].first == <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">int</span> x = ask[i].second;      </span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">20</span>; j &gt;= <span class="number">0</span>; --j) &#123;</span><br><span class="line">        <span class="keyword">if</span> (jump[x][j] != <span class="number">-1</span> &amp;&amp; t[jump[x][j]] &gt;= i) &#123;</span><br><span class="line">          x = jump[x][j];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">int</span> y = sgt.query(<span class="number">0</span>, tot - <span class="number">1</span>, <span class="number">1</span>, dfn[x], out[x] - <span class="number">1</span>);</span><br><span class="line">      <span class="built_in">cout</span> &lt;&lt; y + <span class="number">1</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">      <span class="keyword">if</span> (y != <span class="number">-1</span>) &#123;</span><br><span class="line">        sgt.update(<span class="number">0</span>, tot - <span class="number">1</span>, <span class="number">1</span>, dfn[id[y]], <span class="number">-1</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/23/Codeforces-1420E-Battle-Lemmings/" rel="prev" title="Codeforces 1420E - Battle Lemmings">
+      <i class="fa fa-chevron-left"></i> Codeforces 1420E - Battle Lemmings
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Link"><span class="nav-number">1.</span> <span class="nav-text">Link:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code"><span class="nav-number">3.</span> <span class="nav-text">Code:</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="meox"
+      src="/images/nicolun_1.jpg">
+  <p class="site-author-name" itemprop="name">meox</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">267</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/meox3259" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;meox3259" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">meox</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.2
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
